@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Green Cartel</title>
+
+        <!-- On définit le viewport (la fenêtre) pour donner ses dimention et signifier les possibilités de zoom de l'utilisateur (ici seul l'affiche normal est autorisé) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Les 2 balises suivantes permettent d'indiquer au navigateur qu'il peut considérer le site en temps que Web app lorsqu'il est lancé depuis le bureau -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Style de la barre d'état (valeurs: default / black / black-translucent) -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <!-- Nom de la webapp sur le bureau-->
+        <meta name="apple-mobile-web-app-title" content="Green Cartel">
+        <meta name="mobile-web-app-title" content="Green Cartel">
+
+        <!-- CSS - bootstrap en 1er -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Scripts JS - jquery, jquery mobile, bootstrap + le notre -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </head>
+
+    
+    <body>
+
+
+  <!-- ________________________________BARRE DE NAVIGATION DU BAS_______________________________- -->
+
+  
+  <ul class="nav nav-tabs" id="nav1" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Amis</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="wishlist" aria-selected="false">Wishlist</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Commu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Défis</a>  
+        </li>      
+       <li class="nav-item">
+        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Profil</a>
+    </li>
+    </ul>
+
+
+ <!-- ________________________________BARRE DE NAVIGATION DU HAUT (Catégories)____________________________________________- -->
+
+
+ <h1>Défis</h1>
+ <!-- DÉFINITION DES CATÉGORIES  -->
+            <ul id="barrenav">
+                    <li id="nav2"><a href="#1"> Eau</a></li>
+                    <li id="nav2"><a href="#2"> Transport</a></li>
+                    <li id="nav2"><a href="#3"> Energie</a></li>
+                    <li id="nav2"><a href="#4"> Nature</a></li>
+                    <li id="nav2"><a href="#4"> autre</a></li>
+                    <li id="nav2"><a href="#5"> Niveau</a></li>
+                </ul>
+
+
+
+      
+        <!-- Tab panes -->
+
+        <!-- _____________________________________   PAGE  AMIS  _______________________________  -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">.aa..</div>
+
+        <!-- _____________________________________   PAGE   WishList  _______________________________  -->
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">..bb.</div>
+            
+         <!-- _____________________________________     PAGE Communauté  _______________________________  -->
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">.cc..</div>
+
+           
+         <!-- _____________________________________     PAGE DÉFI    _______________________________  -->
+     
+            
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">liste des défis
+                    <nav>
+                            <button type="button" class="btn btn-primary">défi 1</button>
+                            <button type="button" class="btn btn-secondary">défi 2</button>
+                            <button type="button" class="btn btn-success">defi 3</button> 
+                            <button type="button" class="btn btn-danger">défi 4</button>
+                            <button type="button" class="btn btn-warning">défi 5</button>
+                            <button type="button" class="btn btn-warning">défi 6</button>
+                            <button type="button" class="btn btn-warning">défi 7</button>
+                            <button type="button" class="btn btn-warning">défi 8</button>
+                          
+                        </nav>
+                    </div>
+        <!-- _____________________________________     PAGE PROFIL  _______________________________  -->
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">.zz..</div>
+ 
+
+
+            </div>
+
+          
+            
+        </div>
+
+
+  </body>
+  </html>
+
