@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Green Cartel</title>
+
+        <!-- On définit le viewport (la fenêtre) pour donner ses dimention et signifier les possibilités de zoom de l'utilisateur (ici seul l'affiche normal est autorisé) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Les 2 balises suivantes permettent d'indiquer au navigateur qu'il peut considérer le site en temps que Web app lorsqu'il est lancé depuis le bureau -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Style de la barre d'état (valeurs: default / black / black-translucent) -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <!-- Nom de la webapp sur le bureau-->
+        <meta name="apple-mobile-web-app-title" content="Green Cartel">
+        <meta name="mobile-web-app-title" content="Green Cartel">
+
+        <!-- CSS - bootstrap en 1er -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Scripts JS - jquery, jquery mobile, bootstrap + le notre -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </head>
+
+    
+    <body>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="nav1" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Amis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Wishlist</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Commu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Défis</a>
+            </li>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Profil</a>
+        </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">.aa..</div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">..bb.</div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">.cc..</div>
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">..dd.</div>
+        </div>
+
+
+  </body>
+  </html>
+
