@@ -1,0 +1,62 @@
+#nav1 {
+    bottom: 0px;
+    position : absolute;
+
+}
+
+#barrenav {
+
+    font: 1em sans-serif;
+    display: table;
+    width: 250px;
+    margin: 00px auto;
+    padding: 0;
+    display: table-cell; 
+}
+
+#nav2{
+    background-color:beige;
+    display: table-cell;
+    padding: 8px 10px 8px 10px;
+}
+
+.tab-content { background-color: darkseagreen;
+    height: 600px;
+    /* display: grid; */
+    /* grid-gap: 50px; */
+    position: relative;
+    grid-template-areas:                      "header header header"
+                                              "nav	nav nav"
+                                              "left 	center right "
+                                              "footer	footer footer";
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 100px 20px 600px 200px;
+}
+
+
+h1, h2 {
+    font-family: monospace;
+    text-align: center;
+  }
+
+/* 
+
+.left {
+  background-color: dodgerblue;
+  grid-area: left;
+}
+
+.right {
+  background-color: beige;
+  grid-area: right;
+}
+
+footer {
+  background-color: dodgerblue;
+  grid-area: footer;
+}
+
+.center {
+    color:red
+
+} */
