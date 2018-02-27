@@ -20,6 +20,7 @@
 
         <!-- CSS - bootstrap en 1er -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -91,10 +92,14 @@
     </ul>
 
 
- <!-- ________________________________BARRE DE NAVIGATION DU HAUT (Catégories)____________________________________________- -->
+ <!-- ________________________________BARRE DE NAVIGATION DU HAUT (Catégories   ____________________________________________- -->
 
 
- <h1>Défis</h1>
+ <header >
+     <div class="icon" i class="fas fa-circle-notch"></div>
+     Défis
+    </header>
+
  <!-- DÉFINITION DES CATÉGORIES  -->
             <ul id="barrenav">
                     <li id="nav2"><a href="#1"> Eau</a></li>
@@ -121,7 +126,7 @@
             <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">.cc..</div>
 
            
-         <!-- _____________________________________     PAGE DÉFI    _______________________________  -->
+         <!-- _____________________________________     PAGE DÉFIS    _______________________________  -->
             <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">liste des défis
                     <nav>
                             <button type="button" class="btn btn-primary">défi 1</button>
@@ -135,6 +140,71 @@
                           
                         </nav>
                     </div>
+
+                <!-- _____________________________________     PAGE Défi 1  _______________________________  -->
+                
+                <div class="template-defi" id="defi1">
+
+                    <h4>Adopte une plante!</h4>
+                
+                    <section><!--description-defi-->
+                
+                        <div class="img-defi">
+                            <img src="img/defi1.jpeg">
+                        </div>
+
+                        <div class="texte-defi">
+                            <p>Achète une plante verte en pot et installe-là chez toi!</p>
+                            <p>Rendre son intérieur plus vert et prendre soin de plantes est une première étape vers une meilleure compréhension de la nature.</p>
+                            <p>Installe-là au plus prêt d'une source de lumière, ou si tu peux dehors!</p>
+                        </div>
+
+                    </section>
+
+                    <section><!--impact-defi-->
+                
+                        <div i class="fas fa-circle-notch">
+                        </div>
+
+                            <div class="texte-defi">
+                                <p>Les arbres produisent de l'oxygène au contact de la lumière du soleil! C'est la #photosynthèse.</p>
+                                <p>Planter un arbre permet donc de limiter les émissions de CO2 dans l’atmosphère à notre échelle.<p>
+                            </div>
+
+                        <div i class="fas fa-circle-notch">
+                        </div>
+
+                            <div class="texte-defi">
+                                <p>S'entourer de plantes est aussi un gage de bien-être au quotidien. </p>
+                                <p>Verdir son habitat et sa ville permet d'apprecier davantage son cadre de vie en le rendant visuellement plus joli et plus sain.</p>
+                            </div>
+    
+                    </section>
+
+                    <section><!--validation-defi-->
+
+                            <div class="texte-defi">
+                                Nombre de points à gagner :
+                            </div>
+    
+                            <div class="texte-defi">
+                                Je relève le défi!
+                            </div>
+                        
+    
+                            <div class="texte-defi">
+                                Ajouter ce défi à ma wish-list 
+                            </div>
+    
+                    </section>
+
+
+                </div>
+                    
+           
+            
+
+
         <!-- _____________________________________     PAGE PROFIL  _______________________________  -->
         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">.zz..</div>
  
