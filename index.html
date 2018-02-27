@@ -27,31 +27,66 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <script src="js/script.js"></script>
     </head>
 
     
     <body>
+        <!-- ________________________________ICONES_LIENS_https://fontawesome.com/icons/ -->
 
+        <!--amis =  <i class="fas fa-users"></i> -->
+        <!--fil d'actualité cercle ouvert = <i class="fas fa-circle-notch"></i> -->
+        <!--fil d'actualité cercle gras = <i class="fas fa-dot-circle"></i> -->
+        <!--défis /catégories barres = <i class="fas fa-list-alt"></i> -->
+        <!--profil = <i class="fas fa-user-circle"></i> -->
+
+        <!--retour = <i class="fas fa-chevron-left"></i> -->
+        <!--avancer = <i class="fas fa-angle-right"></i> -->
+        <!--zoom/savoir+ = -->
+        <!--défi relevé = <i class="fas fa-check-square"></i> -->
+        <!--commenter = <i class="far fa-comment"></i> -->
+        <!--lien externe = <i class="fas fa-external-link-square-alt"></i> -->
+        <!--mon compte= <i class="fas fa-cog"></i> -->
+        
+        <!--défi transport= <i class="fas fa-car"></i> -->
+        <!--like vide= <i class="far fa-heart"></i> -->
+        <!--like plein= <i class="fas fa-heart"></i> -->
+        
+
+        <!-- ________________________________ICONES SVG_____________________________-->
+
+  <!--wish-list = 
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><g><path fill="#000000" d="M70.442,42.286c0,2.235-1.799,4.088-4.088,4.088H46.402c-2.29,0-4.088-1.853-4.088-4.088    c0-2.29,1.799-4.088,4.088-4.088h19.952C68.643,38.198,70.442,39.997,70.442,42.286z"/><path fill="#000000" d="M66.354,53.571c2.29,0,4.088,1.799,4.088,4.088c0,2.235-1.799,4.088-4.088,4.088H46.402    c-2.29,0-4.088-1.853-4.088-4.088c0-2.29,1.799-4.088,4.088-4.088H66.354z"/><path fill="#000000" d="M66.354,68.943c2.29,0,4.088,1.799,4.088,4.088c0,2.235-1.799,4.088-4.088,4.088H46.402    c-2.29,0-4.088-1.853-4.088-4.088c0-2.29,1.799-4.088,4.088-4.088H66.354z"/><path fill="#000000" d="M33.646,77.12c-1.09,0-2.126-0.436-2.889-1.199s-1.199-1.853-1.199-2.889c0-1.09,0.436-2.126,1.199-2.889    c0.763-0.763,1.799-1.199,2.889-1.199s2.126,0.436,2.889,1.199c0.763,0.763,1.199,1.799,1.199,2.889    c0,1.036-0.436,2.126-1.199,2.889C35.772,76.684,34.737,77.12,33.646,77.12z"/><path fill="#000000" d="M33.646,61.747c-1.09,0-2.126-0.436-2.889-1.199c-0.763-0.763-1.199-1.853-1.199-2.889    c0-1.09,0.436-2.126,1.199-2.889s1.799-1.199,2.889-1.199s2.126,0.436,2.889,1.199c0.763,0.763,1.199,1.799,1.199,2.889    c0,1.036-0.436,2.126-1.199,2.889C35.772,61.311,34.737,61.747,33.646,61.747z"/><path fill="#000000" d="M33.646,46.375c-1.09,0-2.126-0.436-2.889-1.199c-0.763-0.763-1.199-1.853-1.199-2.889    c0-1.09,0.436-2.126,1.199-2.889s1.799-1.199,2.889-1.199s2.126,0.436,2.889,1.199c0.763,0.763,1.199,1.799,1.199,2.889    c0,1.036-0.436,2.126-1.199,2.889C35.772,45.939,34.737,46.375,33.646,46.375z"/><path fill="#000000" d="M44.44,13.177c-0.763,0-1.363,0.6-1.363,1.363v2.18v2.235c0,0.763,0.6,1.363,1.363,1.363h11.23    c0.763,0,1.363-0.6,1.363-1.363V16.72v-2.18c0-0.763-0.6-1.363-1.363-1.363H44.44z M28.686,86.823h42.629    c4.088-0.055,7.305-3.271,7.305-7.305V28.113c0-4.034-3.216-7.305-7.305-7.305h-6.323c-0.818,4.416-4.688,7.686-9.322,7.686H44.44    c-4.634,0-8.504-3.271-9.322-7.686h-6.432c-2.017,0-3.816,0.818-5.124,2.18c-1.363,1.308-2.18,3.107-2.18,5.124v51.405    C21.381,83.552,24.652,86.823,28.686,86.823z M71.314,95H28.686c-8.504-0.055-15.482-6.923-15.482-15.482V28.113    c0-8.558,6.923-15.482,15.482-15.482h6.432C35.99,8.271,39.806,5,44.44,5h11.23c4.634,0,8.449,3.271,9.322,7.632h6.323    c8.613,0,15.482,6.978,15.482,15.482v51.405c0,4.252-1.69,8.122-4.525,10.957C79.491,93.256,75.566,95,71.314,95z"/></g></g><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Viktor Ostrovsky</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+        -->
+
+        <!--ajout wish-list =  
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Garrett Knoll</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+        -->
+
+    
+       
+
+        
 
   <!-- ________________________________BARRE DE NAVIGATION DU BAS_______________________________- -->
 
   
   <ul class="nav nav-tabs" id="nav1" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Amis</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-users"></i><br> Amis</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="wishlist" aria-selected="false">Wishlist</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-clipboard-list"></i>Wishlist</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Actu</a>
+            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><i class="fas fa-dot-circle"></i></i>Actu</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Défis</a>  
+            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-list-alt"></i>Défis</a>  
         </li>      
        <li class="nav-item">
-        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Profil</a>
+        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-user-circle"></i>Profil</a>
     </li>
     </ul>
 
