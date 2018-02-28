@@ -67,47 +67,55 @@ footer {
 
 
 .template-defi{
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    right: 0; 
+    /*display: block;*/
+    /*display: inline;*/
+    /*flex-direction: column;*/
+    /*left: 0;*/
+    /*right: 0; */
     background-color: rgb(31, 161, 96);   
     color:floralwhite;
     font-size: 10pt;
 }
 
+/*.zone1{
+    display: block;
+}*/
 h4{
     text-align: center;
 }
 
-.zone-1{
+/*.zone1{
     display: inline-block;
     left: 0;
     right: 0; 
     box-sizing: border-box;
-}
+}*/
 
-.zone-2{
+
+/*.zone2{
     display: inline-block;
     left: 0;
     right: 0; 
     box-sizing: border-box;
-}
+}*/
 
-.zone-3{
+/*.zone3{
     display: inline-block;
     left: 0;
     right: 0; 
     box-sizing: border-box;
+}*/
+
+.zone1 img{
+    display: inline;
+    height: 100px;
+    width: auto;
+    float: left;
 }
 
-.img-defi img{
-    height: 200px;
-}
-
-.texte-defi{
+/*.texte-defi{
+    display: inline;
     font-size: 10pt;
     text-align:left;
     padding: 2px 0 2px 2px;
-   
-}
+}*/
