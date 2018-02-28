@@ -67,52 +67,30 @@ footer {
 
 
 .template-defi{
-    /*display: block;*/
-    /*display: inline;*/
-    /*flex-direction: column;*/
-    /*left: 0;*/
-    /*right: 0; */
-    background-color: rgb(31, 161, 96);   
-    color:floralwhite;
+    background-color: rgb(31, 164, 96);   
+    color: floralwhite;
     font-size: 10pt;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-/*.zone1{
-    display: block;
-}*/
 h4{
     text-align: center;
 }
 
-/*.zone1{
-    display: inline-block;
-    left: 0;
-    right: 0; 
-    box-sizing: border-box;
-}*/
-
-
-/*.zone2{
-    display: inline-block;
-    left: 0;
-    right: 0; 
-    box-sizing: border-box;
-}*/
-
-/*.zone3{
-    display: inline-block;
-    left: 0;
-    right: 0; 
-    box-sizing: border-box;
-}*/
-.zone1{
-    height: 150px;
-}
 .zone1 img{
     display: inline;
     height: 100px;
     width: auto;
     float: left;
+}
+.zone1 p{
+    text-align: justify;
+}
+
+.zone3 div .nb-pts{
+    display: inline;
+    /*background-image: url('../img/etoile.jpg');*/
 }
 
 /*.texte-defi{
