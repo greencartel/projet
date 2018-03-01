@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Green Cartel</title>
+
+        <!-- On définit le viewport (la fenêtre) pour donner ses dimention et signifier les possibilités de zoom de l'utilisateur (ici seul l'affiche normal est autorisé) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Les 2 balises suivantes permettent d'indiquer au navigateur qu'il peut considérer le site en temps que Web app lorsqu'il est lancé depuis le bureau -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Style de la barre d'état (valeurs: default / black / black-translucent) -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <!-- Nom de la webapp sur le bureau-->
+        <meta name="apple-mobile-web-app-title" content="Green Cartel">
+        <meta name="mobile-web-app-title" content="Green Cartel">
+
+        <!-- CSS - bootstrap en 1er -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Scripts JS - jquery, jquery mobile, bootstrap + le notre -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+        <!--<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js">-->
+        <script src="js/script.js"></script>
+    </head>  
+
+    <body>
+        <!-- PAGE Défi 1 -->
+        <div class="template-defi" id="defi1">
+            <header>
+                <i class="fas fa-circle-notch"></i> Défi 1
+            </header>
+
+            <h4>Adopte une plante!</h4>
+            <br>
+
+            <div class="zone1"> <!--description-defi-->
+                <img src="img/defi1.jpeg">
+                <p>Achète une plante verte en pot et installe-là chez toi ! Rendre son intérieur plus vert et prendre soin d'une plante est une première étape vers une meilleure compréhension de la nature.</p>
+                <p>Rendre son intérieur plus vert et prendre soin de plantes est une première étape vers une meilleure compréhension de la nature.</p>
+                <p>Installe la au plus près d'une source de lumière, ou dehors si tu peux !</p>
+            </div>
+
+            <div class="zone2"> <!--impact defi-->
+                <div>
+                    <p><i class="fas fa-circle-notch"></i> Les arbres produisent de l'oxygène au contact de la lumière du soleil ! C'est la #photosynthèse. Planter un arbre permet donc de limiter les émissions de CO2 dans l’atmosphère à notre échelle.</p> 
+                </div>
+
+                <div>
+                    <p><i class="fas fa-circle-notch"></i> S'entourer de plantes est aussi un gage de bien-être au quotidien. </p>
+                    <p>Verdir son habitat et sa ville permet d'apprécier davantage son cadre de vie en le rendant visuellement plus joli et plus sain.</p>
+                </div>
+            </div>
+
+            <div class="zone3"><!--validation-defi-->
+                <div>
+                    Nombre de points à gagner : <div class="nb-pts">50</div>
+                </div>
+
+                <div>
+                    Je relève le défi !
+                </div>
+                <div>
+                    Ajouter ce défi à ma wish-list !
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

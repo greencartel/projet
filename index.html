@@ -33,11 +33,6 @@
         <script src="js/script.js"></script>
     </head>
 
-    
-    <body>
-
-
-
         <!-- ________________________________ICONES_LIENS_https://fontawesome.com/icons/ -->
 
 
@@ -73,42 +68,128 @@
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Garrett Knoll</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
         -->
 
+    <body>
+
+        <!-- barre nav du bas -->
+        <ul class="nav nav-tabs" id="nav1" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-users"></i><br> Amis</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-clipboard-list"></i>Wishlist</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><i class="fas fa-dot-circle"></i></i>Actu</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-list-alt"></i>Défis</a>  
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-user-circle"></i>Profil</a>
+            </li>
+        </ul>
+
+
     
-       
+        <div class="tab-content">
 
+            <!-- PAGE  AMIS -->
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">.aa..</div>
+
+
+            <!-- PAGE   WishList -->
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">..bb.</div>
+            
+
+            <!-- PAGE fil d'actualité -->
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+
+        <div class="template-actu">
+
+            <div class="actu-défi"><!--défi rempli-->
         
+                <div class="img-ami"><!--photo du profil utilisateur ou ami-->
+                    <img src="">
+                </div>
 
-  <!-- ________________________________BARRE DE NAVIGATION DU BAS_______________________________- -->
+                <h5>Votre ami "Paul" à remplit un défi</h5><!--Titre-->
 
-  
-  <ul class="nav nav-tabs" id="nav1" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-users"></i><br> Amis</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-clipboard-list"></i>Wishlist</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><i class="fas fa-dot-circle"></i></i>Actu</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-list-alt"></i>Défis</a>  
-        </li>      
-       <li class="nav-item">
-        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-user-circle"></i>Profil</a>
-    </li>
-    </ul>
+                <div class="texte-commentaire">
+                    <p>Je viens d'acheter une plante. Ca en fait une de plus à ma colection!</p>
+                </div>
+
+                <div><!--zone d'action-->
+
+                    <i class="fas fa-check-square"></i><!--défi relevé-->
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g></svg><!--ajout wishlist-->
+                    <i class="fas fa-search-plus"></i><!--voir défi-->
+                    <i class="far fa-heart"></i><!--like-->
+                    <i class="far fa-comment"></i><!--commenter-->
+                    <i class="fas fa-share-square"></i><!--partager-->
+                </div>
+
+                <div class="commentaire-ami">
+
+                    <div class="img-ami"><!--photo  ami-->
+                        <img src="">
+                    </div>
+
+                    <p>Bravo Paul ;)</p><!--commentaire  ami-->
+                </div>
+
+            </div>
 
 
- <!-- ________________________________BARRE DE NAVIGATION DU HAUT (Catégories   ____________________________________________- -->
+            <div class="actu-niveau"><!--niveau atteint-->
+        
+                <div class="img-ami"><!--photo du profil utilisateur ou ami-->
+                    <img src="">
+                </div>
 
- <header>
-    <i class="fas fa-circle-notch"></i>
-    Défis
-</header>
+                <h5>Votre ami(e) "Claire" passe au niveau 3!</h5><!--Titre-->
 
- <!-- DÉFINITION DES CATÉGORIES  -->
-            <ul id="barrenav">
+                <div class="texte-commentaire">
+                    <p>Et oui les amis! Je sur-performe :)</p>
+                </div>
+
+                <div><!--zone d'action-->
+
+                        <i class="fas fa-check-square"></i><!--défi relevé-->
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Garrett Knoll</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg><!--ajout wishlist-->
+                        <i class="fas fa-search-plus"></i><!--voir défi-->
+                        <i class="far fa-heart"></i><!--like-->
+                        <i class="far fa-comment"></i><!--commenter-->
+                        <i class="fas fa-share-square"></i><!--partager-->
+                
+                </div>
+
+            </div>
+
+    </div>
+
+
+
+
+
+            </div>
+
+            <!--  PAGE DÉFIS -->
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                
+                <header>
+                    <h1>Liste des défis</h1>
+                </header>
+
+                <!-- barre navigation categories (haut) -->
+                
+                <!-- definition categories  -->
+                <ul id="barrenav">
                     <li id="nav2"><a href="#1"> Eau</a></li>
                     <li id="nav2"><a href="#2"> Transport</a></li>
                     <li id="nav2"><a href="#3"> Energie</a></li>
@@ -116,106 +197,22 @@
                     <li id="nav2"><a href="#4"> autre</a></li>
                     <li id="nav2"><a href="#5"> Niveau</a></li>
                 </ul>
-
-
-
-      
-        <!-- Tab panes -->
-
-        <!-- _____________________________________   PAGE  AMIS  _______________________________  -->
-        <div class="tab-content">
-            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">.aa..</div>
-
-
-
-        <!-- _____________________________________   PAGE   WishList  _______________________________  -->
-            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">..bb.</div>
-            
-         <!-- _____________________________________     PAGE Communauté  _______________________________  -->
-            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">.cc..</div>
-
-           
-         <!-- _____________________________________     PAGE DÉFIS    _______________________________  -->
-            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">liste des défis
-                    <nav>
-                            <button type="button" class="btn btn-primary">défi 1</button>
-                            <button type="button" class="btn btn-secondary">défi 2</button>
-                            <button type="button" class="btn btn-success">defi 3</button> 
-                            <button type="button" class="btn btn-danger">défi 4</button>
-                            <button type="button" class="btn btn-warning">défi 5</button>
-                            <button type="button" class="btn btn-warning">défi 6</button>
-                            <button type="button" class="btn btn-warning">défi 7</button>
-                            <button type="button" class="btn btn-warning">défi 8</button>
-                          
-                        </nav>
-                    </div>
-
-                <!-- _____________________________________     PAGE Défi 1  _______________________________  -->
-                
-                <div class="template-defi" id="defi1">
-
-                    <h4>Adopte une plante!</h4><br>
-                
-                    <div class="zone1"> <!--description-defi-->
-                        
-                        <img src="img/defi1.jpeg">
-                        <p>Achète une plante verte en pot et installe-là chez toi ! Rendre son intérieur plus vert et prendre soin d'une plante est une première étape vers une meilleure compréhension de la nature.</p>
-                        <p>Rendre son intérieur plus vert et prendre soin de plantes est une première étape vers une meilleure compréhension de la nature.</p>
-                        <p>Installe la au plus près d'une source de lumière, ou dehors si tu peux !</p>
-
-                    </div>
-
-                    <section class="zone2"> <!--impact-defi-->
-
-                        <div class="texte-defi">
-                            <p><i class="fas fa-circle-notch"></i> Les arbres produisent de l'oxygène au contact de la lumière du soleil ! C'est la #photosynthèse. Planter un arbre permet donc de limiter les émissions de CO2 dans l’atmosphère à notre échelle.</p>
-                            
-                        </div>
-
-                        
-                        <div class="texte-defi">
-                            <p><i class="fas fa-circle-notch"></i> S'entourer de plantes est aussi un gage de bien-être au quotidien. </p>
-                            <p>Verdir son habitat et sa ville permet d'apprécier davantage son cadre de vie en le rendant visuellement plus joli et plus sain.</p>
-                        </div>
-    
-                    </section>
-
-                    <section class="zone3"><!--validation-defi-->
-
-                            <div>
-                                Nombre de points à gagner : <div class="nb-pts">50</div>
-                            </div>
-    
-                            <div>
-                                Je relève le défi !
-                            </div>
-                        
-    
-                            <div>
-                                Ajouter ce défi à ma wish-list !
-                            </div>
-    
-                    </section>
-
-
-                </div>
-                    
-           
-            
-
-
-        <!-- _____________________________________     PAGE PROFIL  _______________________________  -->
-        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">.zz..</div>
- 
-
-
+                <nav>
+                    <a href="defi.html" class="btn btn-primary">défi 1</a>
+                    <button type="button" class="btn btn-secondary">défi 2</button>
+                    <button type="button" class="btn btn-success">defi 3</button> 
+                    <button type="button" class="btn btn-danger">défi 4</button>
+                    <button type="button" class="btn btn-warning">défi 5</button>
+                    <button type="button" class="btn btn-warning">défi 6</button>
+                    <button type="button" class="btn btn-warning">défi 7</button>
+                    <button type="button" class="btn btn-warning">défi 8</button>
+                </nav>
             </div>
 
-          
-            
+            <!-- PAGE PROFIL -->
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">.zz..</div>
+
         </div>
-
-
-  </body>
-  </html>
+    </body>
+</html>
 
