@@ -1,21 +1,54 @@
+
+
+
 #nav1 {
     bottom: 0px;
     position : absolute;
+    text-align: center;
+    font-size: 13px;
 
 }
 
 header{
-    color: hotpink;
+    color black;
 }
 
 #barrenav {
     font: 1em sans-serif;
     display: table;
-    width: 250px;
+    width: 70%;
     margin: 00px auto;
     padding: 0;
     display: table-cell; 
 }
+
+
+#btn_defi{ width:70%;
+margin :1%;
+color : black 
+ }
+
+/* scrolling menu catégorisation des défis*/
+div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color:black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+
+
+
 
 svg{
   height:20px;
@@ -25,11 +58,11 @@ svg{
 #nav2{
     background-color:beige;
     display: table-cell;
-    padding: 8px 10px 8px 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .tab-content { background-color: darkseagreen;
-    height: 600px;
+    height: 450px;
     /* display: grid; */
     /* grid-gap: 50px; */
     position: relative;
@@ -47,6 +80,9 @@ h1, h2 {
     text-align: center;
   }
 
+
+ 
+  
 /* 
 
 .left {

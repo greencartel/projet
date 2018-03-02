@@ -25,6 +25,8 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <!-- Scripts JS - jquery, jquery mobile, bootstrap + le notre -->
+     
+      
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -73,23 +75,23 @@
         <!-- barre nav du bas -->
         <ul class="nav nav-tabs" id="nav1" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-users"></i><br> Amis</a>
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-users"></i><br>Amis</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-clipboard-list"></i>Wishlist</a>
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-clipboard-list"></i><br>Wishlist</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><i class="fas fa-dot-circle"></i></i>Actu</a>
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false"><i class="fas fa-dot-circle"></i><br>Actu</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-list-alt"></i>Défis</a>  
+                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-list-alt"></i> <br>Défis</a>  
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-user-circle"></i>Profil</a>
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-user-circle"></i> <br>Profil</a>
             </li>
         </ul>
 
@@ -189,26 +191,49 @@
                 <!-- barre navigation categories (haut) -->
                 
                 <!-- definition categories  -->
+            <!-- <div class="scrollmenu">
                 <ul id="barrenav">
-                    <li id="nav2"><a href="#1"> Eau</a></li>
+                    <a href="#1" id="nav2"> Eau</a>
                     <li id="nav2"><a href="#2"> Transport</a></li>
                     <li id="nav2"><a href="#3"> Energie</a></li>
                     <li id="nav2"><a href="#4"> Nature</a></li>
                     <li id="nav2"><a href="#4"> autre</a></li>
                     <li id="nav2"><a href="#5"> Niveau</a></li>
                 </ul>
-                <nav>
-                    <a href="defi.html" class="btn btn-primary">défi 1</a>
-                    <button type="button" class="btn btn-secondary">défi 2</button>
-                    <button type="button" class="btn btn-success">defi 3</button> 
-                    <button type="button" class="btn btn-danger">défi 4</button>
-                    <button type="button" class="btn btn-warning">défi 5</button>
-                    <button type="button" class="btn btn-warning">défi 6</button>
-                    <button type="button" class="btn btn-warning">défi 7</button>
-                    <button type="button" class="btn btn-warning">défi 8</button>
-                </nav>
+            </div> -->
+        
+            <div class="scrollmenu">
+                    <a id="nav2" href="#0"> Tous</a>
+                    <a href="#1" id="nav2"> Eau</a>
+                    <a id="nav2" href="#2"> Transport</a>
+                    <a id="nav2" href="#3"> Energie</a>
+                    <a id="nav2" href="#4"> Nature</a>
+                    <a id="nav2" href="#4"> autre</a>
+                    <a id="nav2" href="#5"> autre</a>
+                    <a id="nav2" href="#5"> autre</a>
+                    <a id="nav2" href="#5"> autre</a>
+                    <a id="nav2" href="#5"> autre</a>
+                    
+                   
             </div>
-
+            
+                <nav>
+                    <a href="defi.html" id="btn_defi"  class="btn btn-primary">défi 1</a>
+                    
+                    <a class="btn btn-secondary" id="btn_defi" >défi 2</a>
+                    <a class="btn btn-success" id="btn_defi">defi 3</a> 
+                    <a class="btn btn-danger" id="btn_defi">défi 4</a>
+                    <a class="btn btn-warning" id="btn_defi">défi 5</a>
+                    <a class="btn btn-warning" id="btn_defi">défi 6</a>
+                    <a class="btn btn-warning" id="btn_defi">défi 7</a>
+                    <a class="btn btn-warning" id="btn_defi">défi 8</a>
+                    <a class="btn btn-success" id="btn_defi">defi 3</a> 
+                    <a class="btn btn-success" id="btn_defi">defi 3</a> 
+                    <a class="btn btn-success" id="btn_defi">defi 3</a> 
+                </nav>
+            
+            </div>
+      
             <!-- PAGE PROFIL -->
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">.zz..</div>
 
