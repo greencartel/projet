@@ -3,34 +3,27 @@
 
 #nav1 {
     bottom: 0px;
-    position : absolute;
+    position : fixed;
     text-align: center;
-    font-size: 13px;
-
+    font-size: 15.4px;
+    z-index: 500;
+    background-color: white;
 }
 
 header{
     color black;
 }
 
-#barrenav {
-    font: 1em sans-serif;
-    display: table;
-    width: 70%;
-    margin: 00px auto;
-    padding: 0;
-    display: table-cell; 
-}
 
-
-#btn_defi{ width:70%;
-margin :1%;
-color : black 
+#btn_defi{
+    width:98%;
+    margin: 1%;
+    color: black;
  }
 
 /* scrolling menu catégorisation des défis*/
 div.scrollmenu {
-    background-color: #333;
+    background-color: beige;
     overflow: auto;
     white-space: nowrap;
 }
@@ -39,14 +32,9 @@ div.scrollmenu a {
     display: inline-block;
     color:black;
     text-align: center;
-    padding: 14px;
+    padding: 10px;
     text-decoration: none;
 }
-
-div.scrollmenu a:hover {
-    background-color: #777;
-}
-
 
 
 
@@ -55,14 +43,22 @@ svg{
   width: 20px;
 }
 
-#nav2{
+.nav2{
     background-color:beige;
     display: table-cell;
-    padding: 10px 10px 10px 10px;
+    /* padding: 10px 10px 10px 10px; */
+}
+
+#barrenav {
+    font: 1em sans-serif;
+    display: table;
+    width: 70%;
+    margin: 00px auto;
+    padding: 0;
+    display: table-cell;
 }
 
 .tab-content { background-color: darkseagreen;
-    height: 450px;
     /* display: grid; */
     /* grid-gap: 50px; */
     position: relative;
@@ -72,6 +68,7 @@ svg{
                                               "footer	footer footer";
     grid-template-columns: 150px 150px 150px;
     grid-template-rows: 100px 20px 600px 200px;
+    min-height: 500px;
 }
 
 
