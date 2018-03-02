@@ -1,17 +1,40 @@
+body {
+    margin-bottom: 64px;
+}
 
-
-
-#nav1 {
-    bottom: 0px;
+#menuContainer {
+    width: 100%;
     position : fixed;
-    text-align: center;
+    bottom: 0;
+    z-index: 999;
     font-size: 15.4px;
-    z-index: 500;
-    background-color: white;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#menuContainer .nav {
+    margin: 0 auto;
+    border-top: 1px solid #ff0000;
+}
+
+#menuContainer .nav li {
+    width: 20%;
+}
+
+#menuContainer .nav li a {
+    border: 0;
+    color: #000000;
+}
+
+#menuContainer .nav li a.active, #menuContainer .nav li a:hover, #menuContainer .nav li a:focus {
+    border: 0;
+    border-radius: 0;
+    background: #ff0000;
+    color: #ffffff;
 }
 
 header{
-    color black;
+    color: black;
 }
 
 
@@ -78,9 +101,9 @@ h1, h2 {
   }
 
 
- 
-  
-/* 
+
+
+/*
 
 .left {
   background-color: dodgerblue;
@@ -104,7 +127,7 @@ footer {
 
 
 .template-defi{
-    background-color: rgb(31, 164, 96);   
+    background-color: rgb(31, 164, 96);
     color: floralwhite;
     font-size: 10pt;
     padding-left: 10px;
