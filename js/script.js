@@ -51,7 +51,7 @@ $(document).ready(function() {
     });
 
 
-    $('.btn-defi').on('click', function (e) {
+    /*$('.btn-defi').on('click', function (e) {
         // ici, je dois choper l'id du defi que je veux puis je peux afficher le défi dans une nouvelle page !
         // on ouvre defi.html avec les bonnes infos
         var strDefi = this.getAttribute('id'); // on récupère l'id du défi à ouvrir - donne defi0 pour le defi n°0
@@ -61,7 +61,7 @@ $(document).ready(function() {
         $('.template-defi .zone1').html("<img src="' + defis[strDefi]['cheminImage']'">" + defis[strDefi]['description']);
         $('.template-defi .zone2').html(defis[strDefi]['descriptionSup']);
         $('.template-defi .zone3').html('Nombre de points à gagner : <div class="nb-pts">' + defis[strDefi]['nbPoints'] + '</div><div>Je relève le défi !</div><div>Ajouter ce défi à ma wish-list !</div>');        
-    });
+    });*/
 
     $('#profil-tab').on('click', function (e) {
         e.preventDefault();
