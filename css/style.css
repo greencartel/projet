@@ -14,7 +14,7 @@ body {
 
 #menuContainer .nav {
     margin: 0 auto;
-    border-top: 1px solid #ff0000;
+    border-top: 1px solid #f11122;
 }
 
 #menuContainer .nav li {
@@ -38,7 +38,7 @@ header{
 }
 
 
-#btn_defi{
+.btn_defi{
     width:98%;
     margin: 1%;
     color: black;
