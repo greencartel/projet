@@ -60,7 +60,7 @@
         -->
 
     <body>
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-5 col-md-6">
                     AAAAAAA
@@ -69,14 +69,14 @@
                     BBBBBBB
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
         <div class="tab-content">
 
-            <!-- PAGE  AMIS -->
-            <div class="tab-pane active" id="amis" role="tabpanel" aria-labelledby="amis-tab">.aa..</div>
+            <!-- PAGE  AMIS ABANDONNE -->
+            <!-- <div class="tab-pane active" id="amis" role="tabpanel" aria-labelledby="amis-tab">.aa..</div> -->
 
 
             <!-- PAGE   WishList -->
@@ -198,37 +198,61 @@
             </div>
 
 
-            <!-- PAGE PROFIL -->
-            <div class="tab-pane" id="profil" role="tabpanel" aria-labelledby="profil-tab">.zz..</div>
+            <!-- PAGE PROFIL ABANDONNE -->
+            <!-- <div class="tab-pane" id="profil" role="tabpanel" aria-labelledby="profil-tab">.zz..</div> -->
+
+            <div class="tab-pane" id="autres" role="tabpanel" aria-labelledby="autres-tab">
+                <ul>
+                    <li>
+                        <button type="button" class="btn btn btn-outline-secondary btn-lg btn-block"><i class="far fa-address-book"></i> Amis</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn btn-outline-secondary btn-lg btn-block"><i class="fas fa-user-circle"></i> Profil</button>
+                    </li>
+
+                </ul>
+
+
+            </div>
 
         </div>
 
         <!-- Menu -->
         <div id="menuContainer">
             <ul class="nav nav-tabs" role="tablist">
+                
+
                 <li class="nav-item">
-                    <a class="nav-link active" id="amis-tab" data-toggle="tab" href="#amis" role="tab" aria-controls="amis" aria-selected="true"><i class="fas fa-users"></i><br>Amis</a>
+                    <a class="nav-link" id="wishlist-tab" data-toggle="tab" href="#wishlist" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-list-ul"></i><br>Wishlist</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" id="wishlist-tab" data-toggle="tab" href="#wishlist" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-clipboard-list"></i><br>Wishlist</a>
+                    <a class="nav-link" id="actualite-tab" data-toggle="tab" href="#actualite" role="tab" aria-controls="actualite" aria-selected="false"><i class="fas fa-users"></i><br>Actu</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" id="actualite-tab" data-toggle="tab" href="#actualite" role="tab" aria-controls="actualite" aria-selected="false"><i class="fas fa-dot-circle"></i><br>Actu</a>
-                </li>
-
-                <li id="ifed" class="nav-item">
-                    <a class="nav-link" id="defis-tab" data-toggle="tab" href="#defis" role="tab" aria-controls="defis" aria-selected="false"><i class="fas fa-list-alt"></i> <br>Défis</a>
+                    <a class="nav-link" id="defis-tab" data-toggle="tab" href="#defis" role="tab" aria-controls="defis" aria-selected="false"><i class="fas fa-flag-checkered"></i> <br>Défis</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" id="profil-tab" data-toggle="tab" href="#profil" role="tab" aria-controls="profil" aria-selected="false"><i class="fas fa-user-circle"></i> <br>Profil</a>
+                    <a class="nav-link" id="autres-tab" data-toggle="tab" href="#autres" role="tab" aria-controls="autres" aria-selected="false"><i class="fas fa-ellipsis-h"></i><br>Autres</a>
                 </li>
+
+
             </ul>
 
 
         </div>
+
+        <!-- tab profil abandonné
+        <li class="nav-item">
+            <a class="nav-link" id="profil-tab" data-toggle="tab" href="#profil" role="tab" aria-controls="profil" aria-selected="false"><i class="fas fa-user-circle"></i> <br>Profil</a>
+        </li> -->
+        <!-- tab amis abandonné
+        <li class="nav-item">
+            <a class="nav-link active" id="amis-tab" data-toggle="tab" href="#amis" role="tab" aria-controls="amis" aria-selected="true"><i class="fas fa-users"></i><br>Amis</a>
+        </li> -->
+
     </body>
 </html>
 
