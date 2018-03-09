@@ -166,3 +166,12 @@ h4{
     border-radius: 3px;
 }
 
+.sponsor {
+    width : 90px ;
+    height: 90px;
+    margin-left : 6px;
+    
+}
+
+h6 { text-align: center;
+    padding:2px;}
