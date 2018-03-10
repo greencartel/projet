@@ -175,3 +175,9 @@ h4{
 
 h6 { text-align: center;
     padding:2px;}
+
+
+/* actualité */ 
+.template-actu{
+    background-color: white;
+    border:2px dotted black;}
