@@ -145,3 +145,29 @@ $(document).ready(function() {
         </ul>`
     );*/
 });
+
+
+//FIL D'ACTUALITE - boutons 
+
+// $(document).ready(() => {
+//     const button = $(".btn");
+  
+//     button.click(() => {
+//       if (button.text() == " ") {
+//         button.html('<i class="far fa-heart"></i>');
+//       } else {
+//         button.html('<i class="fas fa-heart"></i>');
+//       }
+//     });
+//   });
+
+
+// $(document).on('click','#bouton_like',function(){
+//     var $this=$(this);
+   
+
+// $(document).on('click','#hide_button',function(){
+//     var $this=$(this);
+//      $this.prop('id','show_button');
+//     $this.val("Show");
+// });

@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
@@ -72,7 +73,6 @@
         </div> -->
 
 
-
         <div class="tab-content">
 
             <!-- PAGE  AMIS ABANDONNE -->
@@ -80,6 +80,9 @@
 
 
             <!-- PAGE   WishList -->
+
+
+            
             <div class="tab-pane" id="wishlist" role="tabpanel" aria-labelledby="wishlist-tab">
         
 
@@ -127,68 +130,110 @@
 
 
 
-            <!-- PAGE fil d'actualité -->
-            <div class="tab-pane" id="actualite" role="tabpanel" aria-labelledby="actualite-tab">
+    <!-- PAGE fil d'actualité -->
+         <div class="tab-pane" id="actualite" role="tabpanel" aria-labelledby="actualite-tab">
 
-                <div>
-                    <div class="template-actu"> Eau est la catégorie n°1 au sein de ton cartel !</div>
+        
+            <h1>Ta communauté ! </h1>
 
-                    <div class="actu-défi"><!--défi rempli-->
+            
+        
+            
+    <!-- CATEGORIE + UTILISÉE -->
+                <div class="template-actu" id= "intro_actu" > Eau est la catégorie n°1 au sein de ton cartel ! </div>        
 
-                        <div class="img-ami"><!--photo du profil utilisateur ou ami-->
-                            <img src="">
-                        </div>
-
-                        <h5>Votre ami "Paul" à remplit un défi</h5> <!--Titre-->
-
-                        <div class="texte-commentaire">
-                            <p>Je viens d'acheter une plante. Ca en fait une de plus à ma colection!</p>
-                        </div>
-
-                        <div> <!--zone d'action-->
-
-                            <i class="fas fa-check-square"></i> <!--défi relevé-->
+    <!-- DÉFI RELEVÉ -->
+                    <div class="template-actu"> 
+                        <img src="img/profil/prof1.jpeg" height="42" width="42"> 
+                           <h8>Amélie a remplit un défi :  </h8> 
+                                <p class="nom_defi"> adopte une plante ! <i class="fas fa-check-square"></i> </p>
+                                     <p>Je viens d'acheter une plante. Ca en fait une de plus à ma collection! </p>
+                        
 
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g></svg> <!--ajout wishlist-->
                             <i class="fas fa-search-plus"></i> <!--voir défi-->
-                            <i class="far fa-heart"></i> <!--like-->
+                            
+                            <button class='btn btn-default'id="like"onclick="myFunction()"><i class="far fa-heart red"></i>  </button>  <!-- boutton like-->
+                            
                             <i class="far fa-comment"></i> <!--commenter-->
                             <i class="fas fa-share-square"></i> <!--partager-->
-                        </div>
+                    </div>
 
-                        <div class="commentaire-ami">
-                            <div class="img-ami"> <!--photo  ami-->
-                                <img src="">
-                            </div>
-                            <p>Bravo Paul ;)</p> <!--commentaire ami-->
+
+    <!-- COMMENTAIRE AMI SUITE AU DÉFI RELEVÉ -->
+                        <div class="commentaire"> 
+                                 <img src="img/profil/prof2.jpeg" height="42" width="42"> 
+                                 <h8>Quentin a répondu : </h8>
+                            <p class="repcom">Bravo Amélie ;)</p> 
+                        </div>
+                    
+
+
+    <!-- PASSAGE À UN AUTRE NIVEAU -->
+                    <div class="template-actu"> 
+                            <img src="img/profil/prof3.jpeg" height="42" width="42">  
+                               <h8>Claire passe au niveau 3 !</h8> <!--Titre-->
+                                    <p>Et oui les amis ! Je sur-performe :)</p>
+                    
+
+                        <div> 
+                            <div id="bouton_like"><i class="far fa-heart"></i>  </div> <!--like-->
+                            <i class="far fa-comment"></i> <!--commenter-->
+                            <i class="fas fa-share-square"></i> <!--partager-->
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g></svg> <!--ajout wishlist-->
+                            <i class="fas fa-search-plus"></i> <!--voir défi-->
+                          
                         </div>
                     </div>
 
 
-                    <div class="actu-niveau"> <!--niveau atteint-->
-                        <div class="img-ami"> <!--photo du profil utilisateur ou ami-->
-                            <img src="">
-                        </div>
 
-                        <h5>Votre ami(e) "Claire" passe au niveau 3 !</h5> <!--Titre-->
+                            <div class="template-actu"> 
+                                    <img src="img/profil/prof6.jpeg" height="42" width="42">  
+                                       <h8>Nawelle passe au niveau 5 !</h8> <!--Titre-->
+                                            <p>Enfin le niveau 5 ! #championne</p>
+                                
+        
+                                <div> <!--zone d'action-->
+                                    <button class='btn btn-default'><i class="far fa-heart"></i>  </button>
+                                    <i class="far fa-comment"></i> <!--commenter-->
+                                    <i class="fas fa-share-square"></i> <!--partager-->
+        
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g></svg> <!--ajout wishlist-->
+                                    <i class="fas fa-search-plus"></i> <!--voir défi-->
+                                  
+                                </div>
+                             </div>
 
-                        <div class="texte-commentaire">
-                            <p>Et oui les amis ! Je sur-performe :)</p>
-                        </div>
+    <!-- COMMENTAIRE SUITE AU PASSAGE À UN AUTRE NIVEAU-->
+                            <div class="commentaire"> 
+                                <img src="img/profil/prof4.jpeg" height="42" width="42"> 
+                                <h8> Héléna a répondu : </h8>
+                           <p class="repcom"> Tu viens d'me dépasser ! je t'ai pas vu venir <i class="far fa-hand-peace"></i> </div>
+                            
+        
 
-                        <div> <!--zone d'action-->
-
-                            <i class="fas fa-check-square"></i> <!--défi relevé-->
-
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g></svg> <!--ajout wishlist-->
-                            <i class="fas fa-search-plus"></i> <!--voir défi-->
-                            <i class="far fa-heart"></i> <!--like-->
-                            <i class="far fa-comment"></i> <!--commenter-->
-                            <i class="fas fa-share-square"></i> <!--partager-->
-                        </div>
-                    </div>
-                </div>
+    <!-- DÉFI RELEVÉ N°2 -->
+                            <div class="template-actu"> 
+                                    <img src="img/profil/prof7.jpg" height="42" width="35"> 
+                                    
+                                            <h8>Eddy a remplit un défi :  </h8> <br><br>
+                                            <p class="nom_defi"> J'adopte le vinaigre pour mon ménage !</p>
+                                                 <p>Ma copine m'a dit que c'est super efficace.. On va tester ! </p>
+                                    
+            
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M52,27.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,27.5,52,27.5z"/></g><g><path d="M52,46.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h42c3.313,0,6,2.687,6,6S55.313,46.5,52,46.5z"/></g><g><path d="M34,65.5H10c-3.313,0-6-2.687-6-6s2.687-6,6-6h24c3.313,0,6,2.687,6,6S37.313,65.5,34,65.5z"/></g><g><g><path d="M96,59.5c0,3.31-2.69,6-6,6H77v13c0,3.31-2.69,6-6,6s-6-2.69-6-6v-13H52c-3.31,0-6-2.69-6-6s2.69-6,6-6h13v-13    c0-3.31,2.69-6,6-6s6,2.69,6,6v13h13C93.31,53.5,96,56.19,96,59.5z"/></g></g></svg> <!--ajout wishlist-->
+                                        <i class="fas fa-search-plus"></i> <!--voir défi-->
+                                        <button class='btn btn-default'><i class="far fa-heart"></i>  </button>
+                                        <i class="far fa-comment"></i> <!--commenter-->
+                                        <i class="fas fa-share-square"></i> <!--partager-->
+                                    </div>
             </div>
+          
+        
+
+
 
 
             <!--  PAGE DÉFIS -->

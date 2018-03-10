@@ -1,6 +1,6 @@
 body {
     margin-bottom: 60px;
-    background-color:  #ffcce6;
+    background-color:peachpuff;
 }
 
 #menuContainer {
@@ -105,8 +105,11 @@ svg{
 
 
 h1, h2 {
+    
     font-family: monospace;
     text-align: center;
+    
+   
   }
 
 
@@ -200,5 +203,55 @@ h6 { text-align: center;
 
 /* actualité */ 
 .template-actu{
-    background-color: white;
-    border:2px dotted black;}
+   
+    margin : 5px;
+    padding: 5px;
+    background-color:whitesmoke;
+    border:3px double rgb(124, 116, 116);
+    font-family: 'Times New Roman', Times, serif;
+   
+    
+
+}
+
+    #intro_actu {
+        background-color: lightskyblue;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+    
+    h8{
+        font-weight: bold;  
+        font-family: 'Courier New', Courier, monospace; 
+        
+    }
+
+  .nom_defi{
+    line-height: 5px;
+    text-align: center; 
+    font-family: 'Courier New', Courier, monospace;  
+}
+  
+        
+    .commentaire{
+        line-height: 13px;
+        top: 0px;
+        margin-bottom: 29px;
+        margin-left: 5px ;
+        margin-right: 5px;
+        padding : 0.5px;
+        border-width:1px 3px 3px 3px;
+        border-style:solid dotted;
+        border-color:black green;
+        background-color: rgb(155, 153, 229);
+        }
+
+        .repcom{
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 55px;
+
+        }
+        
+        
