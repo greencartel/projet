@@ -3,6 +3,10 @@
 $(document).ready(function() {
     var defis = []; // defis -- contient tous les défis sous forme d'un tableau à double entrée
     var categories = []; // categories -- contient toutes les catégories sous forme d'un tableau à double entrée
+    
+    // pour afficher l'onglet actualité à l'arrivée sur l'application
+    $('#actualite-tab').tab('show');
+
     $('#amis-tab').on('click', function (e) {
         e.preventDefault();
         $(this).tab('show');
