@@ -3,10 +3,10 @@
 $(document).ready(function() {
     var defis = []; // defis -- contient tous les défis sous forme d'un tableau à double entrée
     var categories = []; // categories -- contient toutes les catégories sous forme d'un tableau à double entrée
-    
+
     // pour afficher l'onglet actualité à l'arrivée sur l'application
     $('#actualite-tab').tab('show');
-    // $('#defis-tab').tab('show');
+    
     $('#amis-tab').on('click', function (e) {
         e.preventDefault();
         $(this).tab('show');
@@ -20,8 +20,8 @@ $(document).ready(function() {
         $(this).tab('show');
     });
 
-
     // traitements page fil d'actualité
+
     // bouton like devient rempli si vide et vice versa
     $('.actu-like').on('click', function(){
         var child = $(this).children('i')[0];
@@ -37,37 +37,13 @@ $(document).ready(function() {
     });
 
 
-
-
-
     // traitements page défis
-    // Récupération des défis -- lors du clic sur le tab défis
+
+    // récupération des défis et des catégories -- lors du clic sur le tab défis
     $('#menuContainer li.nav-item').on('click', '#defis-tab', function (e) {
         e.preventDefault();
-
-        // on récupère d'abord les catégories (besoin pour les couleurs)
-        if(categories.length == 0){
-            // on n'a pas encore récupéré les catégories, on les récupère
-            var data = {
-                "action": "categories"
-            };
-            $.ajax({
-                type: "POST",
-                dataType: "json",
-                url: "back/defis.php", // Relative or absolute path to defis.php file
-                data: data,
-                success: function(data) {
-                    categories = JSON.parse(data['json']);
-                    if(categories['categories'] == 0){
-                        // pas de categories dans la bd
-                        return 0;
-                    }
-                }
-            });
-        }
-
+        // on récupère les défis si besoin
         if(defis.length == 0){
-            // on n'a pas encore récupéré les défis, on les récupère
             var data = {
                 "action": "defis"
             };
@@ -75,74 +51,82 @@ $(document).ready(function() {
                 type: "POST",
                 dataType: "json",
                 url: "back/defis.php", // Relative or absolute path to defis.php file
-                data: data,
-                success: function(data) {
-                    defis = JSON.parse(data['json']);
-
-                    // une fois récupérés, on affiche les titres des défis dans des boutons (tous lors de l'init de cet onglet)
-                    var htmlToAdd = ""; // html a ajouter à nav
-                    var strDefi; // chaine pour récupérer le défi
-                    var strImageDefi; // url de l'image du defi
-                    var strCategorie;
-                    var i;
-                    var j;
-                    var couleurCategorie;
-
-                    
-                    if (defis['defis'] == 0){
-                        // pas de defis dans la bd
-                        return 0;
-                    }
-                    
-                    // on itère sur la taille de defis car il n'y a que les defis dans cette variable
-                    for(i = 0; i < Object.keys(defis).length; i++){
-                        strDefi = 'defi' + i;
-                        
-                        for(j = 0; j < Object.keys(categories).length; j++){
-                            // on récupère aussi la couleur de la catégorie du défi
-                            strCategorie = 'categorie' + j;
-                            if(defis[strDefi]['idCategorie'] == categories[strCategorie]['id']){
-                                couleurCategorie = categories[strCategorie]['couleur'];
-                                break;
-                           }
-                        }
-                        htmlToAdd += '<div class="col-xs-2 btn-image-defi" style ="background-color:' + couleurCategorie + ';"><a id="'+ strDefi +'" class="btn" href="defi.html"><img src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</a></div>';
-                    }
-                    // $('.container-btn-defi').innerHTML = htmlToAdd;
-                    $('.container-btn-defi').html(htmlToAdd);
+                data: data
+            })
+            .done(function(data){
+                defis = JSON.parse(data['json']);
+                if (defis['defis'] == 0){
+                    // pas de defis dans la bd, on part
+                    return 0;
                 }
+            });
+        }
+
+        // on récupère les catégories si besoin
+        if(Object.keys(categories).length == 0){
+            var data = {
+                "action": "categories"
+            };
+
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "back/defis.php", // Relative or absolute path to defis.php file
+                data: data
+            })
+            .done(function( data ) {
+                categories = JSON.parse(data['json']);
+
+                // à partir de là, on a nos categories, on les affiche
+                var i;
+                var strCategorie;
+                var couleurCategorie;
+                var htmlToAdd = ""; // html a ajouter au container
+                for (var strCategorie of Object.keys(categories)) {
+                    couleurCategorie = categories[strCategorie]['couleur'];
+                    htmlToAdd += '<div class="col-6 btn-image-categorie" style ="background-color:' + couleurCategorie + ';"><a class="btn" href="#"><img src="' + categories[strCategorie]['cheminIcone'] + '" id="' + strCategorie + '"><br>' + categories[strCategorie]['nom'] + '</a></div>';
+                }
+
+                $('.container-content-defi')[0].classList.add('container-categories');
+                $('.container-categories .row').html(htmlToAdd); // on ajoute enfin ce html avec les div
+                
             });
         }
         $(this).tab('show');
     });
 
 
-    $('.container-btn-defi').on('click', '.btn-image-defi', function (e) {
-        // ici, je dois choper l'id du defi que je veux puis je peux afficher le défi dans une nouvelle page !
-        // on ouvre defi.html avec les bonnes infos
-        var strDefi = this.getAttribute('id'); // on récupère l'id du défi à ouvrir - donne defi0 pour le defi n°0
-        // $();
-        // window.location = 'defi.html';
-        location.href = 'http://localhost/projet/defi.html';
-        alert(location.href);
-        /*window.location = nouvelleAdresse;
-        window.open($(this).attr('href'));
-        $('.template-defi h4').html(defis[strDefi]['titre']);
-        $('.template-defi .zone1').html("<img src="' + defis[strDefi]['cheminImage']'">" + defis[strDefi]['description']);
-        $('.template-defi .zone2').html(defis[strDefi]['descriptionSup']);
-        $('.template-defi .zone3').html('Nombre de points à gagner : <div class="nb-pts">' + defis[strDefi]['nbPoints'] + '</div><div>Je relève le défi !</div><div>Ajouter ce défi à ma wish-list !</div>');  */      
+    $('.container-content-defi .row').on('click', '.btn-image-categorie a img', function(){
+        // on a cliqué sur une catégorie : on le sait car sélecteur '.btn-image-categorie a img'
+        var idCategorie = $(this)[0].id; // idCategorie dont il faut afficher les défis !
+        var htmlToAdd = ""; // html a ajouter
+        var i;
+        var strDefi;
+        var strCategorie;
+        // on itère sur les defis et on recupere ceux qui sont de cette categorie
+        for (var strDefi of Object.keys(defis)) {
+            strCategorie = 'categorie' + defis[strDefi]['idCategorie']; // dans defis, on a juste le n° de la categorie
+            if(strCategorie == idCategorie){
+                // le defi doit etre affiché
+                htmlToAdd += '<div class="col-6 btn-image-defi"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
+            }
+        }
+
+        $('.container-content-defi')[0].classList.add('container-categories-none');
+        $('.container-content-defi')[0].classList.remove('container-categories');
+        $('.container-content-defi')[0].classList.add('container-defis');
+        // alert($('.container-content-defi')[0].classList);
+        alert(htmlToAdd);
+        $('.container-defis .row').html(htmlToAdd); // on ajoute enfin ce html avec les div
+        
+
+        // !!!!!!!!!!! $('.container-content-defi').css('backgroungcolor=couleur Categorie')
     });
 
     $('#profil-tab').on('click', function (e) {
         e.preventDefault();
         $(this).tab('show');
     });
-
-
-    // $('#menuContainer li.nav-item').on('click', '#defis-tab', function () {
-    //     // e.preventDefault();
-    //     alert('clic profil-tab');
-    // });
 
 
     /* // A decommenter qd ok
@@ -193,3 +177,4 @@ $(document).ready(function() {
 //      $this.prop('id','show_button');
 //     $this.val("Show");
 // });
+

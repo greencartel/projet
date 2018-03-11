@@ -32,16 +32,16 @@ function get_defis(){
       $i = 0;
       $result = array();
       foreach($defis as $defi){
-          
-          $result["defi".$i]['id'] = $defi['id'];
-          $result["defi".$i]['titre'] = $defi['titre'];
-          $result["defi".$i]['nbPoints'] = $defi['nbPoints'];
-          $result["defi".$i]['description'] = $defi['description'];
-          $result["defi".$i]['descriptionSup'] = $defi['descriptionSup'];
-          $result["defi".$i]['cheminImage'] = $defi['cheminImage'];
-          $result["defi".$i]['niveau'] = $defi['niveau'];
-          $result["defi".$i]['idCategorie'] = $defi['idCategorie'];
-          $result["defi".$i]['idSponsor'] = $defi['idSponsor'];
+          $idDefi = $defi['id'];
+          $result["defi".$idDefi]['id'] = $idDefi;
+          $result["defi".$idDefi]['titre'] = $defi['titre'];
+          $result["defi".$idDefi]['nbPoints'] = $defi['nbPoints'];
+          $result["defi".$idDefi]['description'] = $defi['description'];
+          $result["defi".$idDefi]['descriptionSup'] = $defi['descriptionSup'];
+          $result["defi".$idDefi]['cheminImage'] = $defi['cheminImage'];
+          $result["defi".$idDefi]['niveau'] = $defi['niveau'];
+          $result["defi".$idDefi]['idCategorie'] = $defi['idCategorie'];
+          $result["defi".$idDefi]['idSponsor'] = $defi['idSponsor'];
           $i++;
       }
     }
@@ -65,10 +65,11 @@ function get_categories(){
       // on récupère nos catégories
       $i = 0;
       foreach($categories as $categorie){
-        $result["categorie".$i]['id'] = $categorie['id'];
-        $result["categorie".$i]['nom'] = $categorie['nom'];
-        $result["categorie".$i]['cheminIcone'] = $categorie['cheminIcone'];
-        $result["categorie".$i]['couleur'] = $categorie['couleur'];
+        $idCategorie = $categorie['id'];
+        $result["categorie".$idCategorie]['id'] = $idCategorie;
+        $result["categorie".$idCategorie]['nom'] = $categorie['nom'];
+        $result["categorie".$idCategorie]['cheminIcone'] = $categorie['cheminIcone'];
+        $result["categorie".$idCategorie]['couleur'] = $categorie['couleur'];
         $i++;
       }
     }

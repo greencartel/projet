@@ -160,7 +160,7 @@ h4{
     text-align: justify;
 }
 
-.zone3 div .nb-pts{
+.zone3 div .nb-pts {
     display: inline;
     /*background-image: url('../img/etoile.jpg');*/
 }
@@ -172,10 +172,28 @@ h4{
     border-radius: 2px;
 }
 
-.btn-image-categorie img{
+.btn-image-categorie {
+    /*padding:5px;*/
+    border-radius: 2px;
+}
+.btn-image-categorie img {
     height: 115px;
     width: 150px;
+    border-radius: 3px;
 }
+
+.btn-image-categorie a {
+    color: black;
+}
+.container-categories-none{
+    display: none;
+}
+
+/*<div class="col-6 btn-image-categorie">
+    <a id="" class="btn" href="#">
+        <img src="img/categories/bienetre.jpg"><br>Bien-être
+    </a>
+</div>*/
 
 .btn-image-defi {
     display:inline-block;
@@ -194,7 +212,6 @@ h4{
     width: 80px;
     height: 80px;
     margin-left: 6px;
-    
 }
 
 h6 {
@@ -210,7 +227,6 @@ h6 {
     padding: 10px;
     background-color: rgba(240, 248, 255, 0.5);
     /*background-color: #f0f8ff;*/
-
 }
 
 h6 {
@@ -249,6 +265,7 @@ h8{
 .actu-like{
     display:inline-block;
 }
+
 .lien-defi, .lien-defi:hover{
     /* Pour ne pas avoir un lien moche bleu souligné */
     color: black;
