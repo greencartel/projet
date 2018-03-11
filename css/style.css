@@ -182,7 +182,7 @@ h4{
 }
 
 .btn-image-defi img{
-    height: 150px;
+    /*height: 150px;*/
     width: auto;
     border-radius: 3px;
 }
@@ -194,5 +194,19 @@ h4{
     
 }
 
-h6 { text-align: center;
-    padding:2px;}
+h6 {
+    text-align: center;
+    padding:2px;
+}
+
+.container-sponsor-content{
+    
+}
+
+.container-sponsor-content .row{
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0.5);
+    /*background-color: #f0f8ff;*/
+
+
+}

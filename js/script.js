@@ -6,7 +6,7 @@ $(document).ready(function() {
     
     // pour afficher l'onglet actualité à l'arrivée sur l'application
     $('#actualite-tab').tab('show');
-
+    // $('#defis-tab').tab('show');
     $('#amis-tab').on('click', function (e) {
         e.preventDefault();
         $(this).tab('show');
@@ -67,12 +67,13 @@ $(document).ready(function() {
                     var j;
                     var couleurCategorie;
 
-                    // on itère sur la taille de defis car il n'y a que les defis dans cette variable
+                    
                     if (defis['defis'] == 0){
                         // pas de defis dans la bd
                         return 0;
                     }
-
+                    
+                    // on itère sur la taille de defis car il n'y a que les defis dans cette variable
                     for(i = 0; i < Object.keys(defis).length; i++){
                         strDefi = 'defi' + i;
                         
