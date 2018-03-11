@@ -20,6 +20,27 @@ $(document).ready(function() {
         $(this).tab('show');
     });
 
+
+    // traitements page fil d'actualité
+    // bouton like devient rempli si vide et vice versa
+    $('.actu-like').on('click', function(){
+        var child = $(this).children('i')[0];
+        if(child.classList.contains('far')){
+            // c'est le coeur vide, on met fas et on vire far pour coeur plein
+            child.classList.remove('far');
+            child.classList.add('fas');
+        }else if(child.classList.contains('fas')){
+            // c'est le coeur plein, on met far et on vire fas pour coeur vide
+            child.classList.remove('fas');
+            child.classList.add('far');
+        }
+    });
+
+
+
+
+
+    // traitements page défis
     // Récupération des défis -- lors du clic sur le tab défis
     $('#menuContainer li.nav-item').on('click', '#defis-tab', function (e) {
         e.preventDefault();
