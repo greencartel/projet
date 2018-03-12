@@ -45,10 +45,21 @@ font-size : 20px;
 
 header{
     color: black;
+    
+    margin: 15px;
+}
+
+header h1{
+    padding: 5px;
+    /*margin: 15px;*/
+    font-size: 2.5em;
+}
+header .row .col-2{
+    font-size: 2em;
 }
 
 
-.btn_defi{
+.btn-defi{
     width:98%;
     margin: 1%;
     color: black;
@@ -111,32 +122,7 @@ h1, h2 {
     text-align: center;
     
    
-  }
-
-
-
-
-/*
-
-.left {
-  background-color: dodgerblue;
-  grid-area: left;
 }
-
-.right {
-  background-color: beige;
-  grid-area: right;
-}
-
-footer {
-  background-color: dodgerblue;
-  grid-area: footer;
-}
-
-.center {
-    color:red
-
-} */
 
 
 .template-defi{
@@ -173,28 +159,42 @@ h4{
     border-radius: 2px;
 }
 
-.btn-image-categorie {
+.container-defis {
+    min-height: 550px;
+}
+
+.container-un-defi .row {
+    margin: 5px;
+}
+
+/*.div-no-defi {
+    background-color: white;
+}*/
+
+.div-no-defi {
+    margin: 20px;
+}
+
+.btn-image-categorie, .btn-image-defi {
     /*padding:5px;*/
     border-radius: 2px;
+    text-align: center;
 }
-.btn-image-categorie img {
+
+.btn-image-categorie img, .btn-image-defi img{
     height: 115px;
     width: 150px;
     border-radius: 3px;
 }
 
-.btn-image-categorie a {
+/*.btn-image-categorie a {
     color: black;
-}
-.container-categories-none{
+}*/
+
+/* les éléments à masquer */
+.container-categories-none, .container-defis-none, .container-un-defi-none, .btn-retour-defis-none, .btn-retour-un-defi-none {
     display: none;
 }
-
-/*<div class="col-6 btn-image-categorie">
-    <a id="" class="btn" href="#">
-        <img src="img/categories/bienetre.jpg"><br>Bien-être
-    </a>
-</div>*/
 
 .btn-image-defi {
     display:inline-block;
@@ -221,7 +221,6 @@ h6 {
 }
 
 /*.container-sponsor-content{
-    
 }*/
 
 .container-sponsor-content .row{
@@ -250,11 +249,10 @@ h6 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
-    
-h8{
+
+h8 {
     font-weight: bold;  
     font-family: 'Courier New', Courier, monospace; 
-    
 }
 
 .nom_defi{
@@ -289,7 +287,6 @@ h8{
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
     margin-left: 55px;
-
 }
         
   

@@ -24,7 +24,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
     </head>
-
     
 
     <body>
@@ -69,15 +68,14 @@
                     </div>
                     <h6>Contenus sponsorisés</h6>
                 </div>
-    
+                
                 <nav>
-                    <a href="defi.html" id="btn_defi"  class="btn btn-primary">défi sauvegardé 1</a>
-                    <a class="btn btn-secondary" id="btn_defi" >défi sauvegardé 2</a>
-                    <a class="btn btn-success" id="btn_defi">defi sauvegardé 3</a>
-                    <a class="btn btn-danger" id="btn_defi">défi sauvegardé 4</a>
-                    <a class="btn btn-warning" id="btn_defi">défi sauvegardé 5</a>
+                    <a href="defi.html" class="btn btn-primary btn-defi">défi sauvegardé 1</a>
+                    <a class="btn btn-secondary btn-defi">défi sauvegardé 2</a>
+                    <a class="btn btn-success btn-defi">defi sauvegardé 3</a>
+                    <a class="btn btn-danger btn-defi">défi sauvegardé 4</a>
+                    <a class="btn btn-warning btn-defi">défi sauvegardé 5</a>
                 </nav>
-    
             </div>
 
 
@@ -167,7 +165,6 @@
                     <p class="repcom"> Tu viens d'me dépasser ! Je ne t'ai pas vue venir <i class="far fa-hand-peace"></i>
                </div>
 
-
                 <!-- actu 4 : défi relevé n°2 -->
                 <div class="template-actu"> 
                     <img src="img/profil/prof7.jpg" height="42" width="35"> 
@@ -195,7 +192,21 @@
             <div class="tab-pane" id="defis" role="tabpanel" aria-labelledby="defis-tab">
 
                 <header>
-                    <h1>Catégories</h1>
+                    <div class="row">
+                        <div class="col-2 btn-retour-defis btn-retour-defis-none">
+                            <i class="far fa-arrow-alt-circle-left"></i>
+                        </div>
+
+                        <div class="col-2 btn-retour-un-defi btn-retour-un-defi-none">
+                            <i class="far fa-arrow-alt-circle-left"></i>
+                        </div>
+
+                        <div class="col-8">
+                            <h1>Catégories</h1>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
                 </header>
 
                 <!-- Contenus sponsorisés -->
@@ -221,14 +232,24 @@
                 </div>
                 
                 <div class="container-content-defi">
-                    <div class="row">
-                        <!-- vide car on ajoute le contenu avec ajax/javascript -->
+                    
+                    <div class="container-categories">
+                        <div class="row">
+                        </div>
                     </div>
+
+                    <div class="container-defis">
+                        <div class="row">
+                        </div>
+                    </div>
+
+                    <div class="container-un-defi">
+                        <div class="row">
+                        </div>
+                    </div>
+                    <!-- vide car on ajoute le contenu avec ajax/javascript -->
                 </div>
             </div>
-
-            <!-- <div class="container-btn-defi">
-            </div> -->
 
             <div class="tab-pane" id="profil" role="tabpanel" aria-labelledby="profil-tab">..zz..</div>
         </div>
