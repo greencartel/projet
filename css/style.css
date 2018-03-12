@@ -1,63 +1,21 @@
 body {
     margin-bottom: 60px;
     background-color:peachpuff;
-    color: #005C97;
-}
-
-#menuContainer {
-    width: 100%;
-    position : fixed;
-    bottom: 0;
-    z-index: 999;
-    font-size: 13px;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-#menuContainer .nav {
-    margin: 0 auto;
-    border-top: 1px solid  #00bfff;
-
-}
-
-#menuContainer .nav li {
-    width: 25%;
-    
-}
-
-#menuContainer .nav li a {
-    border: 0;
-    padding-left : 5px;
-    padding-right : 5px;
-    color: #000000;
-}
-
-#menuContainer .nav li a i {
-font-size : 20px;
-}
-
-#menuContainer .nav li a.active, #menuContainer .nav li a:hover, #menuContainer .nav li a:focus {
-    border: 0;
-    border-radius: 0;
-    background:  #00bfff;
-    color: #ffffff;
 }
 
 header{
     color: black;
-    
     margin: 15px;
 }
 
 header h1{
     padding: 5px;
-    /*margin: 15px;*/
     font-size: 2.5em;
 }
+
 header .row .col-2{
     font-size: 2em;
 }
-
 
 .btn-defi{
     width:98%;
@@ -65,7 +23,7 @@ header .row .col-2{
     color: black;
  }
 
-/* scrolling menu catégorisation des défis*/
+/* scrolling menu catégorisation des défis */
 div.scrollmenu {
     background-color: beige;
     overflow: auto;
@@ -79,7 +37,6 @@ div.scrollmenu a {
     padding: 10px;
     text-decoration: none;
 }
-
 
 svg{
   height:20px;
@@ -102,7 +59,6 @@ svg{
 }
 
 .tab-content {
-    
     /* display: grid; */
     /* grid-gap: 50px; */
     position: relative;
@@ -115,68 +71,51 @@ svg{
     min-height: 500px;
 }
 
-
 h1, h2 {
-    
     font-family: monospace;
     text-align: center;
-    
-   
 }
 
 
-.template-defi{
-    background-color: rgb(31, 164, 96);
-    color: floralwhite;
-    font-size: 10pt;
-    padding-left: 10px;
-    padding-right: 10px;
+/* tab défis */
+
+
+/* bandeau contenus sponsorisés */
+
+.img-sponsor {
+    width: 80px;
+    height: 80px;
+    margin-left: 6px;
 }
 
-h4{
+h2.titre-sponsor-content {
+    font-size: 15px;
     text-align: center;
+    padding: 2px;
 }
 
-.zone1 img{
-    display: inline;
-    height: 100px;
-    width: auto;
-    float: left;
-}
-.zone1 p{
-    text-align: justify;
+.container-sponsor-content .row, .container-sponsor-content-defi .row{
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0.5);
 }
 
-.zone3 div .nb-pts {
-    display: inline;
-    /*background-image: url('../img/etoile.jpg');*/
+
+/* btn-image */
+
+.container-categories {
+    text-align: center;
+    padding: 5px;
+}
+.container-categories .row .btn-image-categorie {
+    /*margin: 1px;*/
+    /*margin: 0.5px;*/
+    margin-bottom: 7px;
 }
 
-.btn-image-defi {
-    display:inline-block;
-    /*background-color: #00bfff;*/
-    margin:5px;
-    border-radius: 2px;
-}
-
-.container-defis {
-    min-height: 550px;
-}
-
-.container-un-defi .row {
-    margin: 5px;
-}
-
-/*.div-no-defi {
-    background-color: white;
-}*/
-
-.div-no-defi {
-    margin: 20px;
-}
 
 .btn-image-categorie, .btn-image-defi {
-    /*padding:5px;*/
+    /*margin: 2px;*/
+    padding: 5px;
     border-radius: 2px;
     text-align: center;
 }
@@ -186,55 +125,81 @@ h4{
     width: 150px;
     border-radius: 3px;
 }
-
-/*.btn-image-categorie a {
-    color: black;
-}*/
+/*????????*/
+.btn-image-defi img{
+    /*height: 150px;*/
+    border-radius: 3px;
+}
+/*????????*/
 
 /* les éléments à masquer */
-.container-categories-none, .container-defis-none, .container-un-defi-none, .btn-retour-defis-none, .btn-retour-un-defi-none {
+.container-categories-none, .container-defis-none, .container-sponsor-content-none, .container-un-defi-none, .btn-retour-defis-none, .btn-retour-un-defi-none {
     display: none;
 }
 
+
+
+/* page défis */
+
+.container-defis {
+    min-height: 550px;
+}
+
 .btn-image-defi {
-    display:inline-block;
+    /*display:inline-block;*/
     /*background-color: #00bfff;*/
-    margin:5px;
+    /*margin:5px;*/
     border-radius: 2px;
 }
 
-.btn-image-defi img{
-    /*height: 150px;*/
-    width: auto;
-    border-radius: 3px;
+.div-no-defi {
+    margin: 20px;
 }
 
-.sponsor {
-    width: 80px;
-    height: 80px;
-    margin-left: 6px;
+
+
+
+/* page 1 défi*/
+
+.container-un-defi .row {
+    margin: 5px;
 }
 
-h6 {
+h2.titre-defi{
+    font-family: Montserrat;
     text-align: center;
-    padding:2px;
 }
 
-/*.container-sponsor-content{
+.description-defi{
+    text-align: justify;
+    margin: 5px;
+}
+
+.description-defi img{
+    display: inline;
+    height: 100px;
+    width: auto;
+    float: left;
+    margin: 10px;
+}
+
+/*.nb-pts {
+    display: inline;
+    background-image: url('../img/etoile_points.png');
+    background-image: url('../img/etoile.jpg');
 }*/
 
-.container-sponsor-content .row{
-    padding: 10px;
-    background-color: rgba(240, 248, 255, 0.5);
-    /*background-color: #f0f8ff;*/
+.btn-accept-defi img {
+    height:100px;
+    width: auto;
 }
 
-h6 {
-    text-align: center;
-    padding:2px;
-}
 
-/* actualité */ 
+
+
+
+
+/* fil d'actualité */ 
 .template-actu {
     margin : 5px;
     padding: 5px;
@@ -288,5 +253,45 @@ h8 {
     font-family: 'Times New Roman', Times, serif;
     margin-left: 55px;
 }
-        
-  
+
+
+
+/* barre navigation du bas */
+#menuContainer {
+    width: 100%;
+    position : fixed;
+    bottom: 0;
+    z-index: 999;
+    font-size: 13px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#menuContainer .nav {
+    margin: 0 auto;
+    border-top: 1px solid  #00bfff;
+
+}
+
+#menuContainer .nav li {
+    width: 25%;
+    
+}
+
+#menuContainer .nav li a {
+    border: 0;
+    padding-left : 5px;
+    padding-right : 5px;
+    color: #000000;
+}
+
+#menuContainer .nav li a i {
+font-size : 20px;
+}
+
+#menuContainer .nav li a.active, #menuContainer .nav li a:hover, #menuContainer .nav li a:focus {
+    border: 0;
+    border-radius: 0;
+    background:  #00bfff;
+    color: #ffffff;
+}

@@ -5,6 +5,7 @@ $(document).ready(function() {
     var categories = []; // categories -- contient toutes les catégories sous forme d'un tableau à double entrée
     var couleurCategorie; // couleur catégorie sélectionnée
 
+    var btnSvg = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" class="style-scope yt-icon"></path></g></svg>';
 
     // pour afficher l'onglet actualité à l'arrivée sur l'application
     $('#actualite-tab').tab('show');
@@ -40,17 +41,26 @@ $(document).ready(function() {
 
 
     // traitements page défis
+    function hexToRgba(hex, opac) {
+        var bigint = parseInt(hex, 16);
+        var r = (bigint >> 16) & 255;
+        var g = (bigint >> 8) & 255;
+        var b = bigint & 255;
+
+        return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + opac + ')';
+    }
 
     function afficheCategories(){
         // affiche les categories
         $('.container-categories').removeClass('container-categories-none');
+        $('.container-sponsor-content-defi').removeClass('container-sponsor-content-none');
 
         // masque le reste
         $('.container-defis').addClass('container-defis-none'); // défis
         $('.container-un-defi').addClass('container-un-defi-none'); // 1 défi
 
-        $('#defis header .row .btn-retour').addClass('btn-retour-un-defi-none');
-        $('#defis header .row .btn-retour').addClass('btn-retour-defis-none');
+        $('#defis header .row .btn-retour-un-defi').addClass('btn-retour-un-defi-none');
+        $('#defis header .row .btn-retour-defis').addClass('btn-retour-defis-none');
         
         // $('#defis header .row .btn-retour').html = ''; // plus besoin du btn-retour
     }
@@ -58,25 +68,16 @@ $(document).ready(function() {
     function afficheDefis(){
         // affiche les défis
         $('.container-defis').removeClass('container-defis-none');
+        $('.container-sponsor-content-defi').removeClass('container-sponsor-content-none');
 
         // masque le reste
         $('.container-categories').addClass('container-categories-none'); // catégories
         $('.container-un-defi').addClass('container-un-defi-none'); // 1 défi
 
         // traitement bouton retour
-        $('#defis header .row .btn-retour').addClass('btn-retour-un-defi-none');
-        $('#defis header .row .btn-retour').removeClass('btn-retour-defis-none');
+        $('#defis header .row .btn-retour-un-defi').addClass('btn-retour-un-defi-none');
+        $('#defis header .row .btn-retour-defis').removeClass('btn-retour-defis-none');
     }
-
-
-    // function hexToRgb(hex) {
-    //     var bigint = parseInt(hex, 16);
-    //     var r = (bigint >> 16) & 255;
-    //     var g = (bigint >> 8) & 255;
-    //     var b = bigint & 255;
-
-    //     return r + "," + g + "," + b;
-    // }
 
 
     function afficheUnDefi(){
@@ -88,10 +89,12 @@ $(document).ready(function() {
         $('.container-defis').addClass('container-defis-none'); // défis
         
         // traitement bouton retour
-        $('#defis header .row .btn-retour').addClass('btn-retour-defis-none');
-        $('#defis header .row .btn-retour').removeClass('btn-retour-un-defi-none');
-        alert(hexToRgb(couleurCategorie));
+        $('#defis header .row .btn-retour-defis').addClass('btn-retour-defis-none');
+        $('#defis header .row .btn-retour-un-defi').removeClass('btn-retour-un-defi-none');
         $('.container-un-defi').css('background-color', couleurCategorie); // ajout couleur
+
+        // masque les contenus sponsorisés
+        $('.container-sponsor-content-defi').addClass('container-sponsor-content-none');
 
     }
 
@@ -140,8 +143,8 @@ $(document).ready(function() {
                 var couleurCategorie;
                 var htmlToAdd = ""; // html a ajouter au container
                 for (var strCategorie of Object.keys(categories)) {
-                    couleurCategorie = categories[strCategorie]['couleur'];
-                    htmlToAdd += '<div class="col-6 btn-image-categorie" style="background-color:' + couleurCategorie + ';"><img src="' + categories[strCategorie]['cheminIcone'] + '" id="' + strCategorie + '"><br>' + categories[strCategorie]['nom'] + '</div>';
+                    couleurCategorie = hexToRgba(categories[strCategorie]['couleur'], 1);
+                    htmlToAdd += '<div class="col-6"><div class="col-12 btn-image-categorie" style="background-color:' + couleurCategorie + ';"><img src="' + categories[strCategorie]['cheminIcone'] + '" id="' + strCategorie + '"><br>' + categories[strCategorie]['nom'] + '</div></div>';
                 }
 
                 $('.container-content-defi .container-categories .row').html(htmlToAdd); // on ajoute enfin ce html avec les div
@@ -168,13 +171,13 @@ $(document).ready(function() {
             if(strCategorie == idCategorie){
                 // le defi doit etre affiché
                 htmlToAdd += '<div class="col-6 btn-image-defi"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
-                couleurCategorie = categories[strCategorie]['couleur'];
+                couleurCategorie = hexToRgba(categories[strCategorie]['couleur'], 0.3);
             }
         }
         if(htmlToAdd == ""){
             // pas de défis
             $('.container-defis .row').addClass('div-no-defi');
-            couleurCategorie = '#ffffff'
+            couleurCategorie = hexToRgba('ffffff', 1);
             htmlToAdd += '<div>Aucun défi dans cette catégorie</div>';
         }else{
             $('.container-defis .row').removeClass('div-no-defi');
@@ -192,7 +195,8 @@ $(document).ready(function() {
     // clic sur un défi - on affiche son contenu
     $('.container-content-defi .container-defis .row').on('click', '.btn-image-defi', function(){
         var strDefi = $(this).children()[0].id; // idDefi du défi que l'on veut afficher
-        var htmlToAdd = '<h4>' + defis[strDefi]['titre'] + '</h4><br><div class="zone1"><img src="' + defis[strDefi]['cheminImage'] + '">'+ defis[strDefi]['description'] + '</div><div class="zone2">' + defis[strDefi]['descriptionSup'] + '</div><div class="zone3">Nombre de points à gagner : <div class="nb-pts">' + defis[strDefi]['nbPoints'] + '</div><div>Je relève le défi !</div><div>Ajouter ce défi à ma wish-list !</div></div>';
+        // var htmlToAdd = '<h2 class="titre-defi">' + defis[strDefi]['titre'] + '</h2><br><div class="description-defi"><img src="' + defis[strDefi]['cheminImage'] + '">'+ defis[strDefi]['description'] + '</div><div class="description-defi">' + defis[strDefi]['descriptionSup'] + '</div><div class="pts-defis">Nombre de points à gagner : <div class="nb-pts">' + defis[strDefi]['nbPoints'] + '</div><div>Je relève le défi !</div><div>' + btnSvg + '</div></div>';
+        var htmlToAdd = '<h2 class="titre-defi">' + defis[strDefi]['titre'] + '</h2><br><div class="description-defi"><img src="' + defis[strDefi]['cheminImage'] + '">'+ defis[strDefi]['description'] + '</div><div class="description-defi">' + defis[strDefi]['descriptionSup'] + '</div><div class="container-accept-defi"><div class="row"><div class="col-2">' + defis[strDefi]['nbPoints'] + '</div><div class="col-8 btn-accept-defi"><img src="img/btn-defi-accept.png" alt="accepter le défi"></div><div class="col-2">' + btnSvg + '</div></div></div>';
 
         $('.container-un-defi .row').html(htmlToAdd);
         afficheUnDefi();
