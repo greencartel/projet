@@ -249,10 +249,10 @@ $(document).ready(function() {
                 <a class="nav-link" id="autres-tab" data-toggle="tab" href="#autres" role="tab" aria-controls="autres" aria-selected="false"><i class="fas fa-ellipsis-h"></i><br>Autres</a>
             </li>
         </ul>`
-    );
+    );*/
 });
 
-*/
+
 
 //barre de progression// 
 
