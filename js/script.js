@@ -245,8 +245,27 @@ $(document).ready(function() {
                 <a class="nav-link" id="autres-tab" data-toggle="tab" href="#autres" role="tab" aria-controls="autres" aria-selected="false"><i class="fas fa-ellipsis-h"></i><br>Autres</a>
             </li>
         </ul>`
-    );*/
+    );
 });
 
+*/
 
+//barre de progression// 
 
+// var maxprogress = 250;   // total à atteindre
+// var actualprogress = 0;  // valeur courante
+// var itv = 0;  // id pour setinterval
+// function prog()
+// {
+//   if(actualprogress >= maxprogress) 
+//   {
+//     clearInterval(itv);   	
+//     return;
+//   }	
+//   var progressnum = document.getElementById("progressnum");
+//   var indicator = document.getElementById("indicator");
+//   actualprogress += 1;	
+//   indicator.style.width=actualprogress + "px";
+//   progressnum.innerHTML = actualprogress;
+//   if(actualprogress == maxprogress) clearInterval(itv);   
+// }
