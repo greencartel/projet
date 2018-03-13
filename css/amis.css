@@ -1,5 +1,5 @@
 body{
-background-color:navy; 
+    background-color:#17a2b8;
 }
 
 p {
@@ -8,7 +8,6 @@ p {
     text-align: center; 
     color:  wheat;
     margin : 15px;
-
 }
 
 .chip {

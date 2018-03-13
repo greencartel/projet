@@ -4,6 +4,7 @@ $(document).ready(function() {
     var defis = []; // defis -- contient tous les défis sous forme d'un tableau à double entrée
     var categories = []; // categories -- contient toutes les catégories sous forme d'un tableau à double entrée
     var couleurCategorie; // couleur catégorie sélectionnée
+    var titreCategorie;
 
     var btnSvg = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" class="style-scope yt-icon"></path></g></svg>';
 
@@ -62,10 +63,11 @@ $(document).ready(function() {
         $('#defis header .row .btn-retour-un-defi').addClass('btn-retour-un-defi-none');
         $('#defis header .row .btn-retour-defis').addClass('btn-retour-defis-none');
         
+        $('.titre-defis-tab').html('Catégories');
         // $('#defis header .row .btn-retour').html = ''; // plus besoin du btn-retour
     }
 
-    function afficheDefis(){
+    function afficheDefis(titreCategorie){
         // affiche les défis
         $('.container-defis').removeClass('container-defis-none');
         $('.container-sponsor-content-defi').removeClass('container-sponsor-content-none');
@@ -77,10 +79,12 @@ $(document).ready(function() {
         // traitement bouton retour
         $('#defis header .row .btn-retour-un-defi').addClass('btn-retour-un-defi-none');
         $('#defis header .row .btn-retour-defis').removeClass('btn-retour-defis-none');
+        $('.titre-defis-tab').html(titreCategorie);
+
     }
 
 
-    function afficheUnDefi(){
+    function afficheUnDefi(titreDefi){
         // affiche 1 défi
         $('.container-un-defi').removeClass('container-un-defi-none');
 
@@ -95,6 +99,9 @@ $(document).ready(function() {
 
         // masque les contenus sponsorisés
         $('.container-sponsor-content-defi').addClass('container-sponsor-content-none');
+
+        $('.titre-defis-tab').html('');
+
 
     }
 
@@ -144,7 +151,7 @@ $(document).ready(function() {
                 var htmlToAdd = ""; // html a ajouter au container
                 for (var strCategorie of Object.keys(categories)) {
                     couleurCategorie = hexToRgba(categories[strCategorie]['couleur'], 1);
-                    htmlToAdd += '<div class="col-6"><div class="col-12 btn-image-categorie" style="background-color:' + couleurCategorie + ';"><img src="' + categories[strCategorie]['cheminIcone'] + '" id="' + strCategorie + '"><br>' + categories[strCategorie]['nom'] + '</div></div>';
+                    htmlToAdd += '<div class="col-6 btn-image-categorie"><img src="' + categories[strCategorie]['cheminIcone'] + '" id="' + strCategorie + '" style="border-color:' + couleurCategorie + ';"><br>' + categories[strCategorie]['nom'] + '</div>';
                 }
 
                 $('.container-content-defi .container-categories .row').html(htmlToAdd); // on ajoute enfin ce html avec les div
@@ -170,7 +177,7 @@ $(document).ready(function() {
             
             if(strCategorie == idCategorie){
                 // le defi doit etre affiché
-                htmlToAdd += '<div class="col-6 btn-image-defi"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
+                htmlToAdd += '<div class="col-6 btn-image-defi"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br><p>' + defis[strDefi]['titre'] + '</p></div>';
                 couleurCategorie = hexToRgba(categories[strCategorie]['couleur'], 0.3);
             }
         }
@@ -182,9 +189,12 @@ $(document).ready(function() {
         }else{
             $('.container-defis .row').removeClass('div-no-defi');
         }
+
+        // $('#defis .container-defis').css('background-color', couleurCategorie); // ajout couleur
         $('.container-defis').css('background-color', couleurCategorie); // ajout couleur
         $('.container-defis .row').html(htmlToAdd); // ajout du html
-        afficheDefis(); // on affiche les défis
+        titreCategorie = categories[strCategorie]['titre'];
+        afficheDefis(titreCategorie); // on affiche les défis
 
         // ajout du btn retour pour cette page
         // $('#defis header .row .btn-retour').html('<i class="far fa-arrow-alt-circle-left"></i>');
@@ -196,10 +206,11 @@ $(document).ready(function() {
     $('.container-content-defi .container-defis .row').on('click', '.btn-image-defi', function(){
         var strDefi = $(this).children()[0].id; // idDefi du défi que l'on veut afficher
         // var htmlToAdd = '<h2 class="titre-defi">' + defis[strDefi]['titre'] + '</h2><br><div class="description-defi"><img src="' + defis[strDefi]['cheminImage'] + '">'+ defis[strDefi]['description'] + '</div><div class="description-defi">' + defis[strDefi]['descriptionSup'] + '</div><div class="pts-defis">Nombre de points à gagner : <div class="nb-pts">' + defis[strDefi]['nbPoints'] + '</div><div>Je relève le défi !</div><div>' + btnSvg + '</div></div>';
-        var htmlToAdd = '<h2 class="titre-defi">' + defis[strDefi]['titre'] + '</h2><br><div class="description-defi"><img src="' + defis[strDefi]['cheminImage'] + '">'+ defis[strDefi]['description'] + '</div><div class="description-defi">' + defis[strDefi]['descriptionSup'] + '</div><div class="container-accept-defi"><div class="row"><div class="col-2">' + defis[strDefi]['nbPoints'] + '</div><div class="col-8 btn-accept-defi"><img src="img/btn-defi-accept.png" alt="accepter le défi"></div><div class="col-2">' + btnSvg + '</div></div></div>';
+
+        var htmlToAdd = '<h2 class="titre-defi">' + defis[strDefi]['titre'] + '</h2><br><div class="description-defi"><img src="' + defis[strDefi]['cheminImage'] + '">'+ defis[strDefi]['description'] + '</div><div class="description-defi">' + defis[strDefi]['descriptionSup'] + '</div><div class="container-accept-defi"><div class="row"><div class="col-2 nb-pts">' + defis[strDefi]['nbPoints'] + '</div><div class="col-8 btn-accept-defi"><img id="myBtn" src="img/btn-defi-accept.png" alt="accepter le défi"></div><div class="col-2">' + btnSvg + '</div></div></div>';
 
         $('.container-un-defi .row').html(htmlToAdd);
-        afficheUnDefi();
+        afficheUnDefi(defis[strDefi]['titre']);
     });
 
 
@@ -214,8 +225,38 @@ $(document).ready(function() {
 
     $('#defis header .row .btn-retour-un-defi').on('click', function(){
         // on veut retourner à la liste des défis
-        afficheDefis();
+        afficheDefis(titreCategorie);
     });
+
+
+    // ============================== popup défi ==============================
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    $('.container-un-defi .row').on('click', '.btn-accept-defi', function(){
+        modal.style.display = "block";
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    // =========================================================================
+
 
 
     // a voir : le swipe.... désactiver ?
@@ -226,6 +267,66 @@ $(document).ready(function() {
     $('#profil-tab').on('click', function (e) {
         e.preventDefault();
         $(this).tab('show');
+    });
+
+
+
+    // clic sur wishlist tab :  récupération données + affichage 'wishlist'
+    $('#menuContainer li.nav-item').on('click', '#defis-tab', function (e) {
+        e.preventDefault();
+
+        // on récupère les défis si besoin
+        if(defis.length == 0){
+            var data = {
+                "action": "defis"
+            };
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "back/defis.php", // Relative or absolute path to defis.php file
+                data: data
+            })
+            .done(function(data){
+                defis = JSON.parse(data['json']);
+                if (defis['defis'] == 0){
+                    // pas de defis dans la bd, on part
+                    return 0;
+                }
+            });
+        }
+
+        // on récupère les catégories si besoin
+        if(Object.keys(categories).length == 0){
+            var data = {
+                "action": "categories"
+            };
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "back/defis.php", // Relative or absolute path to defis.php file
+                data: data
+            })
+            .done(function( data ) {
+                categories = JSON.parse(data['json']);
+
+                var strDefi;
+                var htmlToAdd = '';
+                var couleurCategorie;
+
+                strDefi = 'defi5';
+                couleurCategorie = categories['categorie' + defis[strDefi]['idCategorie']]['couleur'];
+                htmlToAdd += '<div class="col-6 btn-image-defi" style="background-color:' + couleurCategorie + ';"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
+                strDefi = 'defi9';
+                htmlToAdd += '<div class="col-6 btn-image-defi"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
+                strDefi = 'defi10';
+                htmlToAdd += '<div class="col-6 btn-image-defi"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
+                strDefi = 'defi16';
+                htmlToAdd += '<div class="col-6 btn-image-defi"><img id="' + strDefi + '" src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
+                $('#wishlist .container-defis-sauv').html(htmlToAdd);           
+            });
+        }
+        
+
     });
 
 
