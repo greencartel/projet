@@ -425,10 +425,10 @@ table.table-popup p{
 }
 
 .contact {
-   height: 35px;
+   height: 43px;
    width: auto;
    margin-top: -230px; 
-   margin-left: 130px;
+   margin-left: 125px;
 }
 
 #setting{
@@ -475,18 +475,24 @@ table.table-popup p{
     letter-spacing: 2px;   
 }
 
-
+.row {
+    margin-right: 2px;
+    margin-left: 0.5px;
+}
 
 .container .titre-section-prof {
     font-size: 10pt;
+    text-align: center;
+    
+   
 }
 
 .titre-section-prof {
     padding-bottom: 10px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 #reste {
     margin-top : 15px;
@@ -518,6 +524,7 @@ thead th {
     margin-left :-12px;
     margin-right :-12px;
     background-color: #F5DDD0;
+    font-family: 'Average Sans';
     /*border:1px dashed rgb(124, 116, 116);*/
 }
 
@@ -526,9 +533,11 @@ thead th {
 }
 
 .titre{
+    margin-top: 12px;
     font-size: 12px;
     font-weight:bold;
     color:black;
+    font-family: 'Average Sans';
 }
 
 .suggestion {
