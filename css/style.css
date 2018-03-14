@@ -334,10 +334,10 @@ h2.titre-defi{
     text-align: center;
 }
 
-.btn-accept-defi img {
+/*.btn-accept-defi img {
     height:100px;
     width: auto;
-}
+}*/
 
 /* popup */
 
@@ -360,7 +360,7 @@ h2.titre-defi{
 }*/
 
 div.applaudissements img {
-    height: 50px;
+    height: 125px;
     width: auto;
 }
 
@@ -376,7 +376,7 @@ div.applaudissements img {
     width: 125px;
     background-color: #C7DF5C;
     border-radius: 100%;
-    border-style: dotted;
+    border-style: solid;
     border-width: 1px;
 }
 
@@ -389,6 +389,10 @@ div.applaudissements img {
 .btn-accept-defi p {
     font-size: 12pt;
     padding-bottom: 5px;
+}
+
+table .table-popup {
+    right: 0;
 }
 
 
