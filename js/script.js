@@ -206,9 +206,6 @@ $(document).ready(function() {
         titreCategorie = categories[idCategorie]['nom'];
         afficheDefis(titreCategorie); // on affiche les défis
 
-        // ajout du btn retour pour cette page
-        // $('#defis header .row .btn-retour').html('<i class="far fa-arrow-alt-circle-left"></i>');
-
     });
 
 
@@ -228,9 +225,6 @@ $(document).ready(function() {
     $('#defis header .row .btn-retour-defis').on('click', function(){
         // on veut retourner aux catégories
         afficheCategories();
-        
-        // $('.container-defis').css('background-color', peachpuff); // on remet la couleur du body
-        // $(this).html = '';
     });
 
     $('#defis header .row .btn-retour-un-defi').on('click', function(){
@@ -267,12 +261,6 @@ $(document).ready(function() {
     }
     // =========================================================================
 
-
-
-    // a voir : le swipe.... désactiver ?
-    /*$( "#defis" ).on( "swipe", function retourArriere(){
-         $('.container-categories').removeClass('container-categories-none');
-    });*/
 
     $('#profil-tab').on('click', function (e) {
         e.preventDefault();
@@ -323,14 +311,14 @@ $(document).ready(function() {
                 var htmlToAdd = '<div class="row">';
                 var couleurCategorie;
 
-                strDefi = 'defi5';
+                strDefi = 'defi22';
                 couleurCategorie = categories['categorie' + defis[strDefi]['idCategorie']]['couleur'];
                 htmlToAdd += '<div class="col-6 btn-image-defi" style="background-color:' + couleurCategorie + ';"><img src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
                 strDefi = 'defi9';
                 htmlToAdd += '<div class="col-6 btn-image-defi"><img src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
                 strDefi = 'defi10';
                 htmlToAdd += '<div class="col-6 btn-image-defi"><img src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
-                strDefi = 'defi16';
+                strDefi = 'defi20';
                 htmlToAdd += '<div class="col-6 btn-image-defi"><img src="' + defis[strDefi]['cheminImage'] + '"><br>' + defis[strDefi]['titre'] + '</div>';
                 htmlToAdd += '</div>';
                 $('#wishlist .container-defis-sauv').html(htmlToAdd);           
@@ -355,48 +343,4 @@ $(document).ready(function() {
         }
     });
 
-
-
-    /* // A decommenter qd ok -- ne sera jamais ok...
-    $('#menuContainer').html(`<ul class="nav nav-tabs" role="tablist">
-
-            <li class="nav-item">
-                <a class="nav-link" id="wishlist-tab" data-toggle="tab" href="#wishlist" role="tab" aria-controls="wishlist" aria-selected="false"><i class="fas fa-list-ul"></i><br>Wishlist</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" id="actualite-tab" data-toggle="tab" href="#actualite" role="tab" aria-controls="actualite" aria-selected="false"><i class="fas fa-users"></i><br>Actu</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" id="defis-tab" data-toggle="tab" href="#defis" role="tab" aria-controls="defis" aria-selected="false"><i class="fas fa-flag-checkered"></i><br>Défis</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" id="autres-tab" data-toggle="tab" href="#autres" role="tab" aria-controls="autres" aria-selected="false"><i class="fas fa-ellipsis-h"></i><br>Autres</a>
-            </li>
-        </ul>`
-    );*/
 });
-
-
-
-//barre de progression// 
-
-// var maxprogress = 250;   // total à atteindre
-// var actualprogress = 0;  // valeur courante
-// var itv = 0;  // id pour setinterval
-// function prog()
-// {
-//   if(actualprogress >= maxprogress) 
-//   {
-//     clearInterval(itv);   	
-//     return;
-//   }	
-//   var progressnum = document.getElementById("progressnum");
-//   var indicator = document.getElementById("indicator");
-//   actualprogress += 1;	
-//   indicator.style.width=actualprogress + "px";
-//   progressnum.innerHTML = actualprogress;
-//   if(actualprogress == maxprogress) clearInterval(itv);   
-// }

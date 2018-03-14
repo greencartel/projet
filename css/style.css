@@ -374,10 +374,13 @@ div.applaudissements img {
     text-align: center;
     height: 125px;
     width: 125px;
-    background-color: #C7DF5C;
+    /*background-color: #C7DF5C;*/
+    background-color: #C94600;
+    /*background-color: #7ACCE2;*/
+    color: white;
     border-radius: 100%;
-    border-style: solid;
-    border-width: 1px;
+    border-style: dashed;
+    border-width: 0.5px;
 }
 
 .btn-accept-defi i {
@@ -387,14 +390,20 @@ div.applaudissements img {
 }
 
 .btn-accept-defi p {
+    font-family: 'Arimo';
     font-size: 12pt;
     padding-bottom: 5px;
 }
 
-table .table-popup {
-    right: 0;
+div.modal .modal-content{
+    background-color:#EFEFEF;
 }
 
+table.table-popup p{
+    font-family: 'Roboto';
+    font-size: 5pt;
+    padding-top: 4px;
+}
 
 
 
